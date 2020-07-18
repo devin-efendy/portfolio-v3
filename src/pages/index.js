@@ -1,22 +1,37 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import styled, { createGlobalStyle } from "styled-components"
+import { rhythm } from "../utils/typography"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import MenuNavigation from "../components/MenuNavButton"
+import SectionWrapper from "../components/SectionWrapper"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const Global = createGlobalStyle`
+  body, p { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+  }
+`
+
+const IndexPage = () => {
+  const [nav, showNav] = useState(false)
+
+  return (
+    <div>
+      <Global />
+
+
+      <MenuNavigation />
+
+      <SectionWrapper customStyle={{backgroundColor: "#d7d7d7", height: "100vh"}}> 
+        <p>Homepage</p>
+      </SectionWrapper>
+
+      <SectionWrapper customStyle={{height: "100vh"}}>
+        <h1>About</h1>
+      </SectionWrapper>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  )
+}
 
 export default IndexPage
