@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled, { createGlobalStyle } from "styled-components"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 
 import SEO from "../components/seo"
 import MenuNavigation from "../components/MenuNavButton"
@@ -12,29 +12,37 @@ const Global = createGlobalStyle`
       padding:0; 
       box-sizing:border-box; 
   }
+
+  body, html {
+    overflow: ${({ nav }) => (nav ? "hidden" : "initial")};
+    height: auto;
+  }
+`
+
+const PageWrapper = styled.div`
 `
 
 const IndexPage = () => {
   const [nav, showNav] = useState(false)
 
   return (
-    <div>
+    <PageWrapper>
       <SEO title="Home" />
 
-      <Global />
+      <Global nav={nav} />
 
-      <MenuNavigation />
+      <MenuNavigation nav={nav} showNav={showNav} />
 
       <SectionWrapper
-        customStyle={{ backgroundColor: "#d7d7d7", height: "100vh" }}
+        customStyle={{ backgroundColor: "#d7d7d7", height: "1000px" }}
       >
         <p>Homepage</p>
       </SectionWrapper>
 
-      <SectionWrapper customStyle={{ height: "100vh" }}>
+      <SectionWrapper customStyle={{ height: "1000px" }}>
         <h1>About</h1>
       </SectionWrapper>
-    </div>
+    </PageWrapper>
   )
 }
 

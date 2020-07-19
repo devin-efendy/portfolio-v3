@@ -1,7 +1,8 @@
 import React from "react"
 
-const height = "2rem";
-const width = "2rem";
+const strokeColor="#4bc0c8";
+const height = "40px";
+const width = "40px";
 
 const HomeIcon = (
   <svg
@@ -11,7 +12,7 @@ const HomeIcon = (
     height={height}
     viewBox="0 0 24 24"
     strokeWidth="1.5"
-    stroke="#4bc0c8"
+    stroke={strokeColor}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -31,7 +32,7 @@ const UserIcon = (
     height={height}
     viewBox="0 0 24 24"
     strokeWidth="1.5"
-    stroke="#4bc0c8"
+    stroke={strokeColor}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -50,7 +51,7 @@ const ToolsIcon = (
     height={height}
     viewBox="0 0 24 24"
     strokeWidth="1.5"
-    stroke="#4bc0c8"
+    stroke={strokeColor}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -73,7 +74,7 @@ const BracesIcon = (
     height={height}
     viewBox="0 0 24 24"
     strokeWidth="1.5"
-    stroke="#4bc0c8"
+    stroke={strokeColor}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -94,7 +95,7 @@ const LaptopIcon = (
     height={height}
     viewBox="0 0 24 24"
     strokeWidth="1.5"
-    stroke="#4bc0c8"
+    stroke={strokeColor}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
