@@ -1,10 +1,8 @@
 import React, { useState } from "react"
 import styled, { createGlobalStyle } from "styled-components"
-// import { rhythm } from "../utils/typography"
 
 import SEO from "../components/seo"
-import MenuNavigation from "../components/MenuNavButton"
-import SectionWrapper from "../components/SectionWrapper"
+import FramerNavigation from "../components/Navigation/FramerNavigation"
 
 const Global = createGlobalStyle`
   body, p { 
@@ -23,17 +21,20 @@ const PageWrapper = styled.div`
 `
 
 const IndexPage = () => {
-  const [nav, showNav] = useState(false)
+  // const [nav, showNav] = useState(false)
 
   return (
     <PageWrapper>
       <SEO title="Home" />
 
-      <Global nav={nav} />
+      {/* <Global nav={nav} /> */}
 
-      <MenuNavigation nav={nav} showNav={showNav} />
+      <FramerNavigation/>
 
-      <SectionWrapper
+
+      {/* <MenuNavigation nav={nav} showNav={showNav} /> */}
+
+      {/* <SectionWrapper
         customStyle={{ backgroundColor: "#d7d7d7", height: "1000px" }}
       >
         <p>Homepage</p>
@@ -41,7 +42,7 @@ const IndexPage = () => {
 
       <SectionWrapper customStyle={{ height: "1000px" }}>
         <h1>About</h1>
-      </SectionWrapper>
+      </SectionWrapper> */}
     </PageWrapper>
   )
 }
