@@ -77,7 +77,7 @@ const MenuToggle = ({ toggle }) => {
             "linear-gradient(to bottom right, #FF008C 0%, #D309E1 100%)",
         },
         open: {
-          boxShadow: "none",
+          boxShadow: "0px 3px 15px rgba(0,0,0,0.0)",
           background:
             "linear-gradient(to bottom right, rgb(0,0,0,0) 0%, rgb(0,0,0,0) 100%)",
         },

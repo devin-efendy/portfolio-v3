@@ -2,6 +2,15 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 
+const MotionLi = styled(motion.li)`
+  width: 100%;
+  margin: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 const MotionA = styled(motion.a)`
   background: none !important;
   text-shadow: none !important;
@@ -9,8 +18,10 @@ const MotionA = styled(motion.a)`
 
   :hover {
     background-image: none !important;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: #4bc0c8;
+
+    cursor: pointer;
   }
 `
 
@@ -31,19 +42,18 @@ const variants = {
   },
 }
 
-const MenuItem = ({ children }) => {
-  // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
-
-  const style = { border: `2px solid #FF008C` }
+const MenuItem = ({ i }) => {
+  const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
+  const navText = ["Home", "About", "Skills", "Works", "Contact"];
 
   return (
-    <motion.li
+    <MotionLi
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <MotionA>{children}</MotionA>
-    </motion.li>
+      <MotionA style={{color: `${colors[i]}`}}>{navText[i]}</MotionA>
+    </MotionLi>
   )
 }
 
