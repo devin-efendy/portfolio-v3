@@ -1,21 +1,22 @@
-import React, { useState } from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import React from "react"
+// import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
 
-const Global = createGlobalStyle`
-  body, p { 
-      margin:0; 
-      padding:0; 
-      box-sizing:border-box; 
-  }
+// const Global = createGlobalStyle`
+//   body, p { 
+//       margin:0; 
+//       padding:0; 
+//       box-sizing:border-box; 
+//   }
 
-  body, html {
-    overflow: ${({ nav }) => (nav ? "hidden" : "initial")};
-    height: auto;
-  }
-`
+//   body, html {
+//     overflow: ${({ nav }) => (nav ? "hidden" : "initial")};
+//     height: auto;
+//   }
+// `
 
 const PageWrapper = styled.div`
 `
