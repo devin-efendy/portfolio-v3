@@ -7,33 +7,39 @@ import MenuItem from "./MenuItem"
 // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 
 const Sidebar = styled(motion.ul)`
-  background-color: white;
+  background-color: #141414;
   height: 100vh;
-  width: 200px;
+  width: 100vw;
   margin: 0;
+  /* padding: 0 5rem; */
 
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: none;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   list-style: none;
 
-  @media ${Device.min.MobileM} {
+  @media ${Device.min.Tablet} {
     width: 300px;
   }
 
   @media ${Device.min.LaptopL} {
     width: 400px;
   }
+
+  @media ${Device.min.Desktop} {
+    width: 500px;
+  }
 `
 
 const variants = {
   open: {
-    x: '0',
+    x: "0",
     transition: {
       staggerChildren: 0.07,
       delayChildren: 0.2,
@@ -41,7 +47,7 @@ const variants = {
     },
   },
   closed: {
-    x: '-100%',
+    x: "-100%",
     transition: {
       delay: 0.5,
       staggerChildren: 0.05,
@@ -52,13 +58,15 @@ const variants = {
 }
 
 const NavigationSidebar = () => {
+  const itemIds = [0, 1, 2, 3, 4, 5]
+
   return (
     <Sidebar variants={variants}>
-      <MenuItem>home</MenuItem>
-      <MenuItem>about</MenuItem>
-      <MenuItem>skills</MenuItem>
-      <MenuItem>projects</MenuItem>
-      <MenuItem>contacts</MenuItem>
+      <motion.div>
+        {itemIds.map(i => (
+          <MenuItem i={i} key={i} />
+        ))}
+      </motion.div>
     </Sidebar>
   )
 }

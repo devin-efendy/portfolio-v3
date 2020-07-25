@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
+import SectionWrapper from "../components/SectionWrapper"
 
 // const Global = createGlobalStyle`
 //   body, p { 
@@ -32,18 +33,15 @@ const IndexPage = () => {
 
       <FramerNavigation/>
 
-
-      {/* <MenuNavigation nav={nav} showNav={showNav} /> */}
-
-      {/* <SectionWrapper
-        customStyle={{ backgroundColor: "#d7d7d7", height: "1000px" }}
+      <SectionWrapper
+        customStyle={{ backgroundColor: "#191919", height: "1000px" }}
       >
         <p>Homepage</p>
       </SectionWrapper>
 
       <SectionWrapper customStyle={{ height: "1000px" }}>
         <h1>About</h1>
-      </SectionWrapper> */}
+      </SectionWrapper>
     </PageWrapper>
   )
 }

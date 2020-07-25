@@ -1,15 +1,19 @@
 import * as React from "react"
 import { motion, useCycle } from "framer-motion"
-// import styled from "styled-components"
+import styled from "styled-components"
 import MenuToggle from "./MenuToggle"
 import NavigationSidebar from "./NavigationSidebar"
+
+const Nav = styled(motion.nav)`
+  position: fixed;
+`
 
 
 const FramerNavigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
 
   return (
-    <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
+    <Nav initial={false} animate={isOpen ? "open" : "closed"}>
       <MenuToggle
         toggle={() => {
           toggleOpen()
@@ -17,7 +21,7 @@ const FramerNavigation = () => {
       />
       <NavigationSidebar/>
       
-    </motion.nav>
+    </Nav>
   )
 }
 
