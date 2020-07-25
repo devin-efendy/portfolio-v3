@@ -7,25 +7,25 @@ import MenuItem from "./MenuItem"
 // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 
 const Sidebar = styled(motion.ul)`
-  background-color: white;
+  background-color: #141414;
   height: 100vh;
-  width: 200px;
+  width: 100vw;
   margin: 0;
+  /* padding: 0 5rem; */
 
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-
-  border-radius: 0 50px 50px 0;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: none;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   list-style: none;
 
-  @media ${Device.min.MobileM} {
-    width: 250px;
+  @media ${Device.min.Tablet} {
+    width: 300px;
   }
 
   @media ${Device.min.LaptopL} {
@@ -40,7 +40,6 @@ const Sidebar = styled(motion.ul)`
 const variants = {
   open: {
     x: "0",
-    borderRadius: "0 50px 50px 0",
     transition: {
       staggerChildren: 0.07,
       delayChildren: 0.2,
@@ -49,27 +48,25 @@ const variants = {
   },
   closed: {
     x: "-100%",
-    borderRadius: "0 0 0 0",
     transition: {
       delay: 0.5,
       staggerChildren: 0.05,
       staggerDirection: -1,
       x: { stiffness: 1000 },
-      borderRadius: {
-        duration: 0.2
-      }
     },
   },
 }
 
 const NavigationSidebar = () => {
-  const itemIds = [0, 1, 2, 3, 4]
+  const itemIds = [0, 1, 2, 3, 4, 5]
 
   return (
     <Sidebar variants={variants}>
-      {itemIds.map(i => (
-        <MenuItem i={i} key={i} />
-      ))}
+      <motion.div>
+        {itemIds.map(i => (
+          <MenuItem i={i} key={i} />
+        ))}
+      </motion.div>
     </Sidebar>
   )
 }

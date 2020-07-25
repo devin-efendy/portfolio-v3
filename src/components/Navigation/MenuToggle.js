@@ -21,8 +21,9 @@ const ToggleButton = styled(motion.button)`
   cursor: pointer;
 
   background: linear-gradient(to bottom right, #ff008c 0%, #d309e1 100%);
+  /* background: linear-gradient(to bottom right, #9C1AFF 0%, #FF008C 100%); */
 
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px #ff008c;
 
   padding: 3px;
 
@@ -72,14 +73,14 @@ const MenuToggle = ({ toggle }) => {
       whileTap={{ scale: 0.95 }}
       variants={{
         closed: {
-          boxShadow: "0px 3px 15px rgba(0,0,0,0.2)",
+          boxShadow: "0px 3px 15px rgba(255, 0, 140, 0.3)",
           background:
-            "linear-gradient(to bottom right, #FF008C 0%, #D309E1 100%)",
+            "linear-gradient(to bottom right, #FF008C, #D309E1)",
         },
         open: {
           boxShadow: "0px 3px 15px rgba(0,0,0,0.0)",
           background:
-            "linear-gradient(to bottom right, rgb(0,0,0,0) 0%, rgb(0,0,0,0) 100%)",
+            "linear-gradient(to bottom right, rgb(0,0,0,0), rgb(0,0,0,0))",
         },
       }}
     >
@@ -87,7 +88,7 @@ const MenuToggle = ({ toggle }) => {
         <Path
           variants={{
             closed: { d: "M 5 7.5 L 30 7.5", stroke: "white" },
-            open: { d: "M 5 30 L 30 5", stroke: "black" },
+            open: { d: "M 5 30 L 30 5", stroke: "white" },
           }}
           transition={{}}
         />
@@ -102,7 +103,7 @@ const MenuToggle = ({ toggle }) => {
         <Path
           variants={{
             closed: { d: "M 5 27.5 L 30 27.5", stroke: "white" },
-            open: { d: "M 5 5 L 30 30", stroke: "black" },
+            open: { d: "M 5 5 L 30 30", stroke: "white" },
           }}
         />
       </Svg>
