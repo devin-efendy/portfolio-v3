@@ -8,7 +8,6 @@ const SectionWrapper = styled(motion.section)`
   background: linear-gradient(to bottom right, #191919 0%, #1b1b1b 100%);
   display: flex;
   height: 100vh;
-  margin: 0 auto;
 
   align-items: center;
   justify-content: center;
@@ -52,6 +51,8 @@ const IntroText = styled(motion.p)`
 
   opacity: 0;
 
+  padding: 0 2rem;
+
   @media ${Device.min.Tablet} {
     font-size: 1rem;
   }
@@ -88,27 +89,50 @@ const ExploreButton = styled(motion.button)`
   }
 `
 
+const ScribbleText = styled(motion.p)`
+  font-family: "Reenie Beanie", cursive;
+  color: gray;
+  opacity: 0;
+  font-size: 1rem;
+`
+
 const HomeSection = () => {
   return (
-    <motion.div>
-      <SectionWrapper id="home">
-        <Container>
-          <HeaderText
+    <SectionWrapper id="home">
+      <Container>
+        <HeaderText
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
+        >
+          <ScribbleText
+            style={{ textAlign: "left", marginTop: "0.5rem 0" }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
           >
-            <motion.span>Hi! My name is</motion.span> <br />
-            <NameHighlight>DEVIN EFENDY.</NameHighlight>
-          </HeaderText>
+            Oh! Looks like someone is here.. Welcome!
+          </ScribbleText>
+          <motion.span>Hi! My name is</motion.span> <br />
+          <NameHighlight>DEVIN EFENDY.</NameHighlight>
+        </HeaderText>
 
-          {RenderIntroText()}
+        {RenderIntroText()}
 
-          <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <ExploreButton>Explore</ExploreButton>
-          </motion.a>
-        </Container>
-      </SectionWrapper>
-    </motion.div>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ExploreButton>Explore</ExploreButton>
+        </motion.a>
+
+        <ScribbleText
+          style={{ marginTop: "1rem" }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
+        >
+          let's explore together, shall we? ⤵
+        </ScribbleText>
+      </Container>
+    </SectionWrapper>
   )
 }
 
@@ -117,7 +141,7 @@ const RenderIntroText = () => {
     return (
       <IntroText
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 2, ease: "easeOut" }}
+        transition={{ delay: 1, duration: 2, ease: "easeOut" }}
       >
         I'm a third year computer science co-op student
         <br />
@@ -128,7 +152,7 @@ const RenderIntroText = () => {
     return (
       <IntroText
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 2, ease: "easeOut" }}
+        transition={{ delay: 1, duration: 2, ease: "easeOut" }}
       >
         I'm a third year computer science co-op student at the University of
         Manitoba.

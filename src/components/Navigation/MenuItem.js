@@ -42,6 +42,15 @@ const MotionA = styled(motion.a)`
 
     cursor: pointer;
   }
+
+  @media ${Device.min.LaptopL} {
+    font-size: 1.5rem;
+
+    svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `
 
 const liVariants = {
@@ -71,7 +80,7 @@ const svgVariant = {
     },
   },
   hover: {
-    stroke: `#8954ff`,
+    stroke: `#C837C2`,
     transition: {
       // duration: 0.2,
       type: "tween",
@@ -90,7 +99,7 @@ const textVariant = {
     },
   },
   hover: {
-    color: `#8954ff`,
+    color: `#C837C2`,
     transition: {
       // duration: 0.2,
       type: "tween",
