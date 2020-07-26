@@ -42,6 +42,15 @@ const MotionA = styled(motion.a)`
 
     cursor: pointer;
   }
+
+  @media ${Device.min.LaptopL} {
+    font-size: 1.5rem;
+
+    svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `
 
 const liVariants = {
@@ -65,15 +74,15 @@ const svgVariant = {
   rest: {
     stroke: "#ffffff",
     transition: {
-      duration: 0.1,
+      // duration: 0.1,
       type: "tween",
       ease: "easeIn",
     },
   },
   hover: {
-    stroke: `#FF008C`,
+    stroke: `#C837C2`,
     transition: {
-      duration: 0.2,
+      // duration: 0.2,
       type: "tween",
       ease: "easeOut",
     },
@@ -84,15 +93,15 @@ const textVariant = {
   rest: {
     color: "#ffffff",
     transition: {
-      duration: 0.1,
+      // duration: 0.1,
       type: "tween",
       ease: "easeIn",
     },
   },
   hover: {
-    color: `#FF008C`,
+    color: `#C837C2`,
     transition: {
-      duration: 0.2,
+      // duration: 0.2,
       type: "tween",
       ease: "easeOut",
     },

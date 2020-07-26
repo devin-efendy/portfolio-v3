@@ -1,9 +1,10 @@
-const darkBlue = "#009AFE";
-const purple = "#8954FF";
-const lightBlue = "#00CCFF";
-const green = "#00C180";
-const yellow = "#FFC200";
-const red ="#FF3366"
+const purple = "#8954FF"
+const darkBlue = "#009AFE"
+const lightBlue = "#00CCFF"
+const green = "#00C180"
+const yellow = "#FFC200"
+const brightRed = "#ff008c"
+const red = "#FF3366"
 
 const Colors = {
   darkBlue,
@@ -11,7 +12,8 @@ const Colors = {
   lightBlue,
   green,
   yellow,
-  red
+  red,
+  brightRed,
 }
 
-export default Colors;
+export default Colors

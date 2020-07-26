@@ -6,8 +6,8 @@ import NavigationSidebar from "./NavigationSidebar"
 
 const Nav = styled(motion.nav)`
   position: fixed;
+  width: 0;
 `
-
 
 const FramerNavigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
