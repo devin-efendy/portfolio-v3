@@ -2,6 +2,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
+import Colors from "../../utils/ColorPallate"
 
 // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 
@@ -20,8 +21,8 @@ const ToggleButton = styled(motion.button)`
   outline: none;
   cursor: pointer;
 
-  background: linear-gradient(to bottom right, #ff008c 0%, #d309e1 100%);
-  /* background: linear-gradient(to bottom right, #9C1AFF 0%, #FF008C 100%); */
+  /* background: linear-gradient(to bottom right, #ff008c 0%, #d309e1 100%); */
+  background: linear-gradient(to bottom right, #9C1AFF, #FF008C);
 
   box-shadow: 0px 3px 15px #ff008c;
 
@@ -75,12 +76,13 @@ const MenuToggle = ({ toggle }) => {
         closed: {
           boxShadow: "0px 3px 15px rgba(255, 0, 140, 0.3)",
           background:
-            "linear-gradient(to bottom right, #FF008C, #D309E1)",
+            // `linear-gradient(to bottom right, #ff008c, #d309e1)`,
+            `linear-gradient(to bottom right, #9C1AFF, #FF008C)`,
         },
         open: {
           boxShadow: "0px 3px 15px rgba(0,0,0,0.0)",
           background:
-            "linear-gradient(to bottom right, rgb(0,0,0,0), rgb(0,0,0,0))",
+            `linear-gradient(to bottom right, rgb(0,0,0,0), rgb(0,0,0,0))`,
         },
       }}
     >

@@ -65,15 +65,15 @@ const svgVariant = {
   rest: {
     stroke: "#ffffff",
     transition: {
-      duration: 0.1,
+      // duration: 0.1,
       type: "tween",
       ease: "easeIn",
     },
   },
   hover: {
-    stroke: `#FF008C`,
+    stroke: `#8954ff`,
     transition: {
-      duration: 0.2,
+      // duration: 0.2,
       type: "tween",
       ease: "easeOut",
     },
@@ -84,15 +84,15 @@ const textVariant = {
   rest: {
     color: "#ffffff",
     transition: {
-      duration: 0.1,
+      // duration: 0.1,
       type: "tween",
       ease: "easeIn",
     },
   },
   hover: {
-    color: `#FF008C`,
+    color: `#8954ff`,
     transition: {
-      duration: 0.2,
+      // duration: 0.2,
       type: "tween",
       ease: "easeOut",
     },
