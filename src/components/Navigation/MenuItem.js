@@ -35,6 +35,8 @@ const MotionA = styled(motion.a)`
     height: 25px;
   }
 
+  font-size: 1rem;
+
   :hover {
     background-image: none !important;
     text-decoration: none;
@@ -43,8 +45,8 @@ const MotionA = styled(motion.a)`
     cursor: pointer;
   }
 
-  @media ${Device.min.LaptopL} {
-    font-size: 1.5rem;
+  @media ${Device.min.LaptopXL} {
+    font-size: 1.2rem;
 
     svg {
       width: 45px;
