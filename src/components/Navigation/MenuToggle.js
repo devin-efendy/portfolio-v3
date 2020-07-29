@@ -36,7 +36,7 @@ const ToggleButton = styled(motion.button)`
     left: 2rem;
   }
 
-  @media ${Device.min.LaptopL} {
+  @media ${Device.min.Desktop} {
     height: 70px;
     width: 70px;
 

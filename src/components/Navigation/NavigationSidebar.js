@@ -28,7 +28,7 @@ const Sidebar = styled(motion.ul)`
     width: 300px;
   }
 
-  @media ${Device.min.LaptopL} {
+  @media ${Device.min.LaptopXL} {
     width: 400px;
   }
 
