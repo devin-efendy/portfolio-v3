@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 
 const strokeColor = "rgba(255,255,255,0.75)"
+const strokeWidth = "1"
 const height = "40px"
 const width = "40px"
 
@@ -14,7 +15,7 @@ const HomeIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"
@@ -37,7 +38,7 @@ const UserIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"
@@ -59,7 +60,7 @@ const ToolsIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"
@@ -84,7 +85,7 @@ const BracesIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"
@@ -107,7 +108,7 @@ const LaptopIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"
@@ -128,7 +129,7 @@ const PhoneIcon = ({ variants }) => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width={strokeWidth}
       stroke={strokeColor}
       fill="none"
       strokeLinecap="round"

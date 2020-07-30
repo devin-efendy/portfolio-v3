@@ -2,7 +2,6 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
-import Colors from "../../utils/ColorPallate"
 
 // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 

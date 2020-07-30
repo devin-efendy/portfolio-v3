@@ -2,7 +2,6 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
-import Scribble from "../Text/Scribble"
 
 const SectionWrapper = styled(motion.section)`
   background: #1b1b1b;
@@ -75,59 +74,62 @@ const ExploreButton = styled(motion.button)`
   box-shadow: 0px 3px 15px rgba(156, 26, 255, 0.3);
 
   margin-top: 4rem;
-  margin-bottom: 0.5rem;
   padding: 0 1rem;
 
   color: white;
-  /* font-weight: 700; */
+  font-weight: 700;
+  font-size: 1rem;
 
   @media ${Device.min.LaptopL} {
-    width: 160px;
-    height: 50px;
+    width: 200px;
+    height: 67px;
     margin-top: 5rem;
-    /* font-size: 1.3rem; */
+    font-size: 1.3rem;
   }
 `
 
-const HomeSection = () => {
+const ScribbleText = styled(motion.p)`
+  font-family: "Reenie Beanie", cursive;
+  color: gray;
+  opacity: 0;
+  font-size: 1rem;
+`
+
+const AboutSection = () => {
   return (
     <SectionWrapper id="home">
       <Container>
-        <motion.div>
-          <Scribble
-            style={{
-              marginBottom: "1rem",
-              textAlign: "left",
-              marginTop: "0.5rem 0",
-              opacity: "0",
-            }}
+        <HeaderText
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
+        >
+          <ScribbleText
+            style={{ textAlign: "left", marginTop: "0.5rem 0" }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
           >
             Oh! Looks like someone is here.. Welcome!
-          </Scribble>
-          <HeaderText
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 2 }}
-          >
-            <motion.span>Hi! My name is</motion.span> <br />
-            <NameHighlight>DEVIN EFENDY.</NameHighlight>
-          </HeaderText>
-        </motion.div>
+          </ScribbleText>
+          <motion.span>Hi! My name is</motion.span> <br />
+          <NameHighlight>DEVIN EFENDY.</NameHighlight>
+        </HeaderText>
 
         {RenderIntroText()}
 
-        <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <ExploreButton>Explore</ExploreButton>
         </motion.a>
 
-        <Scribble
-          style={{ marginTop: "1rem", opacity: "0" }}
+        <ScribbleText
+          style={{ marginTop: "1rem" }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
         >
           let's explore together, shall we? ⤵
-        </Scribble>
+        </ScribbleText>
       </Container>
     </SectionWrapper>
   )
@@ -158,4 +160,4 @@ const RenderIntroText = () => {
   }
 }
 
-export default HomeSection
+export default AboutSection

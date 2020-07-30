@@ -1,11 +1,13 @@
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
+// import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 import { motion } from "framer-motion"
 
-import typography from "../utils/typography"
+// import typography from "../utils/typography"
 import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
 import HomeSection from "../components/HomeSection/HomeSection"
+import AboutSection from "../components/AboutSection/AboutSection"
 
 const Global = createGlobalStyle`
   body, p, h1, h2, h3, a { 
@@ -46,6 +48,7 @@ const IndexPage = () => {
       <FramerNavigation />
 
       <HomeSection />
+      <AboutSection />
     </motion.div>
   )
 }

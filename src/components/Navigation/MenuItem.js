@@ -19,10 +19,11 @@ const MotionA = styled(motion.a)`
   text-shadow: none !important;
   background-image: none !important;
 
-  font-weight: 900;
+  /* font-weight: 900; */
   color: #ffffff;
 
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -31,8 +32,8 @@ const MotionA = styled(motion.a)`
     display: flex;
     justify-content: center;
     margin-right: 1rem;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 
   font-size: 1rem;
@@ -49,8 +50,17 @@ const MotionA = styled(motion.a)`
     font-size: 1.2rem;
 
     svg {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media ${Device.min.Desktop} {
+    font-size: 1.2rem;
+
+    svg {
+      width: 40px;
+      height: 40px;
     }
   }
 `
@@ -74,38 +84,34 @@ const liVariants = {
 
 const svgVariant = {
   rest: {
-    stroke: "#ffffff",
+    stroke: "rgba(255,255,255,0.65)",
     transition: {
-      // duration: 0.1,
+      duration: 0.1,
       type: "tween",
-      ease: "easeIn",
     },
   },
   hover: {
-    stroke: `#C837C2`,
+    stroke: "rgba(255,255,255,1)",
     transition: {
-      // duration: 0.2,
+      duration: 0.1,
       type: "tween",
-      ease: "easeOut",
     },
   },
 }
 
 const textVariant = {
   rest: {
-    color: "#ffffff",
+    color: "rgba(255,255,255,0.65)",
     transition: {
-      // duration: 0.1,
+      duration: 0.1,
       type: "tween",
-      ease: "easeIn",
     },
   },
   hover: {
-    color: `#C837C2`,
+    color: "rgba(255,255,255,1)",
     transition: {
-      // duration: 0.2,
+      duration: 0.1,
       type: "tween",
-      ease: "easeOut",
     },
   },
 }
