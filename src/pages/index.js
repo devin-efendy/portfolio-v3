@@ -1,49 +1,55 @@
-import React, { useState } from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import React from "react"
+// import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
+import { motion } from "framer-motion"
 
+// import typography from "../utils/typography"
 import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
+import HomeSection from "../components/HomeSection/HomeSection"
+import AboutSection from "../components/AboutSection/AboutSection"
 
 const Global = createGlobalStyle`
-  body, p { 
+  body, p, h1, h2, h3, a { 
+      color: white;
       margin:0; 
       padding:0; 
       box-sizing:border-box; 
   }
 
   body, html {
-    overflow: ${({ nav }) => (nav ? "hidden" : "initial")};
+    /* overflow: ${({ nav }) => (nav ? "hidden" : "initial")}; */
     height: auto;
   }
-`
 
-const PageWrapper = styled.div`
+  a{
+    background: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+
+    :hover {
+      background-image: none !important;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 `
 
 const IndexPage = () => {
   // const [nav, showNav] = useState(false)
 
   return (
-    <PageWrapper>
+    <motion.div>
+
       <SEO title="Home" />
 
-      {/* <Global nav={nav} /> */}
+      <Global />
 
-      <FramerNavigation/>
+      <FramerNavigation />
 
-
-      {/* <MenuNavigation nav={nav} showNav={showNav} /> */}
-
-      {/* <SectionWrapper
-        customStyle={{ backgroundColor: "#d7d7d7", height: "1000px" }}
-      >
-        <p>Homepage</p>
-      </SectionWrapper>
-
-      <SectionWrapper customStyle={{ height: "1000px" }}>
-        <h1>About</h1>
-      </SectionWrapper> */}
-    </PageWrapper>
+      <HomeSection />
+      <AboutSection />
+    </motion.div>
   )
 }
 

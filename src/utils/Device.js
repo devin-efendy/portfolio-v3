@@ -5,6 +5,7 @@ const size = {
   tablet: "768px",
   laptop: "1024px",
   laptopL: "1440px",
+  laptopXL: "1600px",
   desktop: "2560px",
 }
 
@@ -16,6 +17,7 @@ const Device = {
     Tablet: `(max-width: ${size.tablet})`,
     Laptop: `(max-width: ${size.laptop})`,
     LaptopL: `(max-width: ${size.laptopL})`,
+    LaptopXL: `(max-width: ${size.laptopXL})`,
     Desktop: `(max-width: ${size.desktop})`,
   },
   min: {
@@ -25,6 +27,7 @@ const Device = {
     Tablet: `(min-width: ${size.tablet})`,
     Laptop: `(min-width: ${size.laptop})`,
     LaptopL: `(min-width: ${size.laptopL})`,
+    LaptopXL: `(min-width: ${size.laptopXL})`,
     Desktop: `(min-width: ${size.desktop})`,
   },
 }
