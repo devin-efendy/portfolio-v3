@@ -19,7 +19,6 @@ const MotionA = styled(motion.a)`
   text-shadow: none !important;
   background-image: none !important;
 
-  /* font-weight: 900; */
   color: #ffffff;
 
   display: flex;

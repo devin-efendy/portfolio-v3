@@ -6,8 +6,10 @@ import Title from "../Text/Title"
 
 const SectionWrapper = styled(motion.section)`
   background: #1b1b1b;
-  display: flex;
-  height: 100vh;
+  /* display: flex; */
+  /* height: 100vh; */
+
+  padding: 0.5rem;
 
   align-items: center;
   justify-content: center;
@@ -26,6 +28,10 @@ const Container = styled(motion.div)`
 const AboutSection = () => {
   return (
     <SectionWrapper style={{border: "1px solid white"}} id="about">
+      <Container style={{border: "1px solid red"}}>
+        <Title>About</Title>
+      </Container>
+
       <Container style={{border: "1px solid red"}}>
         <Title>About</Title>
       </Container>

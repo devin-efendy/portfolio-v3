@@ -39,7 +39,7 @@ const HeaderText = styled(motion.h1)`
 `
 
 const NameHighlight = styled(motion.span)`
-  background: linear-gradient(to bottom right, #8954ff 0%, #ff008c 100%);
+  background-image: linear-gradient(135deg, #0396ff 40%, #abdcff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
@@ -47,7 +47,7 @@ const NameHighlight = styled(motion.span)`
 const IntroText = styled(motion.p)`
   margin-top: 1.5rem;
   margin-bottom: 3rem;
-  
+
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
 
@@ -74,25 +74,22 @@ const ExploreButton = styled(motion.button)`
   border-radius: 25rem;
   cursor: pointer;
 
-  background: linear-gradient(to right, #8954ff, #ff008c);
-  background: linear-gradient(to right, #8954ff, #ff008c);
-  box-shadow: 0px 3px 15px rgba(156, 26, 255, 0.3);
+  background: #0396ff;
+  box-shadow: 0px 3px 15px rgba(3, 150, 255, 0.45);
 
-  /* margin-top: 4rem; */
   margin-bottom: 0.5rem;
   padding: 0 1rem;
 
   color: white;
-  /* font-weight: 700; */
 
   @media ${Device.min.Tablet} {
     width: 160px;
-    height: 50px;
+    height: 45px;
   }
 
   @media ${Device.min.LaptopL} {
-    width: 170px;
-    height: 60px;
+    width: 190px;
+    height: 50px;
     font-size: 1.25rem;
   }
 `
@@ -112,11 +109,11 @@ const HomeSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
           >
-            Oh! Looks like someone is here.. Welcome!
+            Oh look! Someone is here
           </Scribble>
           <HeaderText
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 3, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
           >
             <motion.span>Hi! My name is</motion.span> <br />
             <NameHighlight>DEVIN EFENDY.</NameHighlight>
@@ -132,7 +129,7 @@ const HomeSection = () => {
         <Scribble
           style={{ marginTop: "1rem", opacity: "0" }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.7, duration: 2, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
         >
           let's explore together, shall we? ⤵
         </Scribble>
@@ -146,7 +143,7 @@ const RenderIntroText = () => {
     return (
       <IntroText
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 2, ease: "easeOut" }}
+        transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
       >
         I'm a third year computer science co-op student
         <br />
@@ -157,7 +154,7 @@ const RenderIntroText = () => {
     return (
       <IntroText
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 3, ease: "easeOut" }}
+        transition={{ delay: 0.2, duration: 2, ease: "easeOut" }}
       >
         I'm a third year computer science co-op student at the University of
         Manitoba.
