@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
 import HomeSection from "../components/HomeSection/HomeSection"
 import AboutSection from "../components/AboutSection/AboutSection"
+import SocialNav from "../components/Navigation/SocialNav"
 
 const Global = createGlobalStyle`
   body, p, h1, h2, h3, a { 
@@ -46,6 +47,7 @@ const IndexPage = () => {
       <Global />
 
       <FramerNavigation />
+      <SocialNav />
 
       <HomeSection />
       <AboutSection />

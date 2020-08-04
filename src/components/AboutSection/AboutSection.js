@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
 import Title from "../Text/Title"
+import Scribble from "../Text/Scribble"
 
 const SectionWrapper = styled(motion.section)`
   background: #1b1b1b;
@@ -29,7 +30,9 @@ const AboutSection = () => {
   return (
     <SectionWrapper style={{border: "1px solid white"}} id="about">
       <Container style={{border: "1px solid red"}}>
-        <Title>About</Title>
+        <Title>About Me</Title>
+        <Scribble>A little bit about myself</Scribble>
+
       </Container>
 
       <Container style={{border: "1px solid red"}}>
