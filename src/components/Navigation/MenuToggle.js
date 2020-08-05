@@ -5,8 +5,6 @@ import Device from "../../utils/Device"
 
 const ToggleButton = styled(motion.button)`
   position: fixed;
-  height: 50px;
-  width: 50px;
 
   top: 1.5rem;
   left: 1.5rem;
@@ -19,28 +17,22 @@ const ToggleButton = styled(motion.button)`
   outline: none;
   cursor: pointer;
 
-  padding: 3px;
+  padding: 0;
 
   @media ${Device.min.Tablet} {
-    height: 60px;
-    width: 60px;
-
     top: 2rem;
     left: 2rem;
   }
 
   @media ${Device.min.Desktop} {
-    height: 70px;
-    width: 70px;
-
     top: 3rem;
     left: 3rem;
   }
 `
 
 const Svg = styled.svg`
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 
   display: block;
   margin: auto;
@@ -61,35 +53,35 @@ const Path = props => (
 
 const MenuToggle = ({ toggle }) => {
   return (
-      <ToggleButton
-        onClick={toggle}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Svg>
-          <Path
-            variants={{
-              closed: { d: "M 5 7.5 L 30 7.5", stroke: "white" },
-              open: { d: "M 5 30 L 30 5", stroke: "white" },
-            }}
-            transition={{}}
-          />
-          <Path
-            d="M 5 17.5 L 30 17.5"
-            variants={{
-              closed: { opacity: 1 },
-              open: { opacity: 0 },
-            }}
-            transition={{ duration: 0.1 }}
-          />
-          <Path
-            variants={{
-              closed: { d: "M 5 27.5 L 30 27.5", stroke: "white" },
-              open: { d: "M 5 5 L 30 30", stroke: "white" },
-            }}
-          />
-        </Svg>
-      </ToggleButton>
+    <ToggleButton
+      onClick={toggle}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <Svg>
+        <Path
+          variants={{
+            closed: { d: "M 7.5 12.5 42.5 12.5", stroke: "white" },
+            open: { d: "M 10 40 L 40 10", stroke: "white" },
+          }}
+          transition={{}}
+        />
+        <Path
+          d="M 15 25 42.5 25"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+          transition={{ duration: 0.1 }}
+        />
+        <Path
+          variants={{
+            closed: { d: "M 7.5 37.5 42.5 37.5", stroke: "white" },
+            open: { d: "M 10 10 L 40 40  ", stroke: "white" },
+          }}
+        />
+      </Svg>
+    </ToggleButton>
   )
 }
 

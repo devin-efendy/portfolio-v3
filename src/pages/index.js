@@ -9,6 +9,7 @@ import FramerNavigation from "../components/Navigation/FramerNavigation"
 import HomeSection from "../components/HomeSection/HomeSection"
 import AboutSection from "../components/AboutSection/AboutSection"
 import SocialNav from "../components/Navigation/SocialNav"
+import FixedLogo from "../components/Navigation/FixedLogo"
 
 const Global = createGlobalStyle`
   body, p, h1, h2, h3, a { 
@@ -41,12 +42,13 @@ const IndexPage = () => {
 
   return (
     <motion.div>
-
       <SEO title="Home" />
 
       <Global />
 
       <FramerNavigation />
+
+      <FixedLogo/>
       <SocialNav />
 
       <HomeSection />

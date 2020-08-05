@@ -13,6 +13,8 @@ const SocialContainer = styled(motion.div)`
   right: 2rem;
   height: 100vh;
 
+  width: 50px;
+
   margin: 0;
 
   @media ${Device.min.Tablet} {
@@ -23,7 +25,7 @@ const SocialContainer = styled(motion.div)`
     justify-content: center;
   }
 
-  @media ${Device.min.LaptopL} {
+  @media ${Device.min.Desktop} {
     right: 3rem;
   }
 `
@@ -34,13 +36,13 @@ const SocialLink = styled(motion.a)`
 
   color: rgba(255, 255, 255, 0.65);
 
-  @media ${Device.min.LaptopL} {
+  @media ${Device.min.Laptop} {
     margin-top: 2rem;
     font-size: 1.5rem;
   }
 
   @media ${Device.min.LaptopXL} {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   opacity: 0;
