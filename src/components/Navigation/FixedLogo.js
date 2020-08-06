@@ -7,11 +7,13 @@ import Device from "../../utils/Device"
 
 const Brand = styled(motion.div)`
   position: fixed;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 1rem;
+  top: 1rem;
 
   width: 50px;
   height: 5px;
+
+  z-index: 10;
 
   @media ${Device.min.Tablet} {
     top: 2rem;
@@ -40,8 +42,6 @@ const FixedLogo = () => {
       }
     `
   )
-
-  console.log(data)
 
   return (
     <Brand>

@@ -69,13 +69,13 @@ const SocialVariants = {
   hold: {
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 1.5,
+      delayChildren: 1.25,
     },
   },
   start: {
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 1.5,
+      delayChildren: 1.25,
     },
   },
 }

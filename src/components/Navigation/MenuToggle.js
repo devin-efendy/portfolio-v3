@@ -6,8 +6,8 @@ import Device from "../../utils/Device"
 const ToggleButton = styled(motion.button)`
   position: fixed;
 
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1rem;
+  left: 1rem;
 
   z-index: 10;
 

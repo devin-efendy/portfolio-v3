@@ -11,6 +11,8 @@ const Sidebar = styled(motion.ul)`
   height: 100vh;
   width: 100vw;
   margin: 0;
+
+  z-index: 10;
   /* padding: 0 5rem; */
 
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -62,7 +64,7 @@ const NavigationSidebar = () => {
 
   return (
     <Sidebar variants={variants}>
-      <motion.div>
+      <motion.div style={{zIndex: 10}}>
         {itemIds.map(i => (
           <MenuItem i={i} key={i} />
         ))}

@@ -47,8 +47,7 @@ const IndexPage = () => {
       <Global />
 
       <FramerNavigation />
-
-      <FixedLogo/>
+      <FixedLogo />
       <SocialNav />
 
       <HomeSection />

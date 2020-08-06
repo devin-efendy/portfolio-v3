@@ -7,6 +7,7 @@ import NavigationSidebar from "./NavigationSidebar"
 const Nav = styled(motion.nav)`
   position: fixed;
   width: 0;
+  z-index: 10;
 `
 
 const FramerNavigation = () => {
