@@ -124,9 +124,9 @@ const HomeSection = () => {
         </motion.div>
 
         <IntroText>
-          I'm a third year computer science co-op student
+          I like to play around and tinker with tech {" "} 
           <LineBreak />
-          at the University of Manitoba.
+          and also, build all kind of things with it.
         </IntroText>
 
         <motion.a whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.975 }}>
