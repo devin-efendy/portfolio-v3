@@ -1,5 +1,5 @@
 import * as React from "react"
-import { motion, useCycle } from "framer-motion"
+import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -79,8 +79,6 @@ const SocialVariants = {
     },
   },
 }
-
-var mounted = false
 
 const SocialNav = () => {
   return (

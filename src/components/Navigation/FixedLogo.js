@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { motion, useCycle } from "framer-motion"
+import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
 

@@ -3,7 +3,9 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
 
-const Text = styled(motion.p)`
+const Text = styled(motion.span)`
+  display: inline-block;
+  
   font-family: "Reenie Beanie", cursive;
   color: gray;
   font-size: 1rem;

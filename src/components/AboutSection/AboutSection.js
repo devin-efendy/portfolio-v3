@@ -6,39 +6,18 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 import Device from "../../utils/Device"
-import Title from "../Text/Title"
 import Scribble from "../Text/Scribble"
-import Colors from "../../utils/ColorPallate"
+import SectionContainer from "../layout/SectionContainer"
 
 const SectionWrapper = styled(motion.section)`
   background: #1b1b1b;
   display: flex;
 
-  padding-top: 5rem;
+  padding: 5rem 0;
 
-  /* align-items: center; */
   justify-content: center;
 
-  height: 200vh;
-`
-
-const SectionContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  padding: 0 2rem;
-  width: 100%;
-
-  /* border: 1px solid red; */
-
-  @media ${Device.min.Tablet} {
-    padding: 0 4rem;
-  }
-
-  @media ${Device.min.Laptop} {
-    padding: 0 9rem;
-  }
+  /* height: 200vh; */
 `
 
 const ResponsiveContainer = styled(motion.div)`
@@ -46,14 +25,10 @@ const ResponsiveContainer = styled(motion.div)`
 
   align-items: center;
   justify-items: center;
-  /* align-items: center; */
 
   width: 100%;
 
   grid-template-columns: auto;
-  /* grid-template-rows: auto auto; */
-
-  /* border: 1px solid white; */
 
   @media ${Device.min.Laptop} {
     grid-column-gap: 10px;
@@ -73,16 +48,9 @@ const TextContainer = styled(motion.div)`
 `
 
 const TitleContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-  /* padding: 0 1rem; */
+  grid-column: 1 / 3;
   margin-bottom: 2rem;
   width: 100%;
-
-  /* border: 1px solid red; */
 `
 
 const ImgContainer = styled(motion.div)`
@@ -96,12 +64,16 @@ const ImgContainer = styled(motion.div)`
 
 const ImgMobile = styled(motion.custom(Img))`
   border-radius: 10px;
-  width: 100%;
+  max-width: 250px;
 
   margin: auto;
 
   @media ${Device.min.Laptop} {
-    width: 70%;
+    max-width: 270px;
+  }
+
+  @media ${Device.min.LaptopM} {
+    max-width: 350px;
   }
 `
 const AboutHeading = styled(motion.h1)`
@@ -119,8 +91,6 @@ const AboutHeading = styled(motion.h1)`
     max-width: 500px;
   }
 `
-
-const KeyVal = styled(motion.span)``
 
 const AboutParagraph = styled(motion.p)`
   margin-bottom: 3rem;
@@ -142,36 +112,22 @@ const AboutSection = () => {
             }
           }
         }
-        desktopAboutImage: file(relativePath: { eq: "about-img.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     `
   )
 
-  const sources = [
-    data.mobileAboutImage.childImageSharp.fluid,
-    {
-      ...data.desktopAboutImage.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    },
-  ]
+  const sources = [data.mobileAboutImage.childImageSharp.fluid]
 
   console.log(data)
 
   return (
     <SectionWrapper id="about">
       <SectionContainer>
-        <TitleContainer>
-          <motion.h2>about me</motion.h2>
-          {/* <Scribble style={{fontSize: "2rem"}}>About Me</Scribble> */}
-        </TitleContainer>
-
         <ResponsiveContainer>
+          <TitleContainer>
+            <motion.h2>about me</motion.h2>
+          </TitleContainer>
+
           <TextContainer>
             <Scribble>My strongest values </Scribble>
 
@@ -180,10 +136,10 @@ const AboutSection = () => {
               Student.
             </AboutHeading>
 
+            <Scribble style={{ width: "100%", textAlign: "right" }}>
+              A little bit about myself
+            </Scribble>
             <AboutParagraph>
-              <Scribble style={{ textAlign: "right" }}>
-                A little bit about myself
-              </Scribble>
               I'm a fourth year Computer Science (Co-op) Honours student at the
               University of Manitoba. I have been very passionate about all
               things tech. Especially, in area such as Software Engineering, Web

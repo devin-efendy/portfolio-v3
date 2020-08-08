@@ -3,7 +3,6 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import TablerIcon from "../../utils/TablerIcon"
 import Device from "../../utils/Device"
-import Colors from "../../utils/ColorPallate"
 
 const MotionLi = styled(motion.li)`
   width: 100%;
