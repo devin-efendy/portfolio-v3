@@ -73,6 +73,10 @@ const ImgMobile = styled(motion.custom(Img))`
   }
 
   @media ${Device.min.LaptopM} {
+    max-width: 300px;
+  }
+
+  @media ${Device.min.LaptopL} {
     max-width: 350px;
   }
 `

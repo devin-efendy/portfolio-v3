@@ -68,13 +68,13 @@ const LinkVariants = {
 const SocialVariants = {
   hold: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
       delayChildren: 1.25,
     },
   },
   start: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
       delayChildren: 1.25,
     },
   },
