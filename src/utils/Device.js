@@ -2,13 +2,13 @@ const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopM: "1366px",
-  laptopL: "1440px",
-  laptopXL: "1600px",
-  fhd: "1920px",
-  desktop: "2560px",
+  tablet: "748px",
+  laptop: "1000px",
+  laptopM: "1346px",
+  laptopL: "1420px",
+  laptopXL: "1580px",
+  fhd: "1900px",
+  desktop: "2540px",
 }
 
 const Device = {
