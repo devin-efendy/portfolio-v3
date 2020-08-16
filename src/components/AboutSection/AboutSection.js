@@ -1,8 +1,10 @@
-import * as React from "react"
+import React, { useRef, useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+
 import styled from "styled-components"
 
 import Device from "../../utils/Device"
@@ -17,6 +19,7 @@ const SectionWrapper = styled(motion.section)`
 
   justify-content: center;
 
+  /* overflow: scroll; */
   /* height: 200vh; */
 `
 
@@ -122,41 +125,69 @@ const AboutSection = () => {
 
   const sources = [data.mobileAboutImage.childImageSharp.fluid]
 
-  console.log(data)
+  const controls = useAnimation()
+  const [ref, inView] = useInView({ threshold: 0.3 })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+      console.log("It's inView")
+    }
+  }, [controls, inView])
 
   return (
     <SectionWrapper id="about">
-      <SectionContainer>
-        <ResponsiveContainer>
-          <TitleContainer>
-            <motion.h2>about me</motion.h2>
-          </TitleContainer>
+      <motion.div ref={ref} animate={controls} initial="hidden">
+        <SectionContainer>
+          <ResponsiveContainer>
+            <TitleContainer
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 },
+              }}
+              transition={{ duration: 1 }}
+            >
+              <motion.h2>about me</motion.h2>
+            </TitleContainer>
 
-          <TextContainer>
-            <Scribble>My strongest values </Scribble>
+            <TextContainer
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 },
+              }}
+              transition={{ duration: 1 }}
+            >
+              <Scribble>My strongest values </Scribble>
 
-            <AboutHeading>
-              Driven, passionate, dedicated, and curious software developer / CS
-              Student.
-            </AboutHeading>
+              <AboutHeading>
+                Driven, passionate, dedicated, and curious software developer /
+                CS Student.
+              </AboutHeading>
 
-            <Scribble style={{ width: "100%", textAlign: "right" }}>
-              A little bit about myself
-            </Scribble>
-            <AboutParagraph>
-              I'm a fourth year Computer Science (Co-op) Honours student at the
-              University of Manitoba. I have been very passionate about all
-              things tech. Especially, in area such as Software Engineering, Web
-              Development, and UI/UX Design. But, I would be happy to explore
-              other areas too!
-            </AboutParagraph>
-          </TextContainer>
+              <Scribble style={{ width: "100%", textAlign: "right" }}>
+                A little bit about myself
+              </Scribble>
+              <AboutParagraph>
+                I'm a fourth year Computer Science (Co-op) Honours student at
+                the University of Manitoba. I have been very passionate about
+                all things tech. Especially, in area such as Software
+                Engineering, Web Development, and UI/UX Design. But, I would be
+                happy to explore other areas too!
+              </AboutParagraph>
+            </TextContainer>
 
-          <ImgContainer>
-            <ImgMobile fluid={sources} />
-          </ImgContainer>
-        </ResponsiveContainer>
-      </SectionContainer>
+            <ImgContainer
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 },
+              }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              <ImgMobile fluid={sources} />
+            </ImgContainer>
+          </ResponsiveContainer>
+        </SectionContainer>
+      </motion.div>
     </SectionWrapper>
   )
 }
