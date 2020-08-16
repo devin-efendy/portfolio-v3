@@ -4,18 +4,18 @@ import styled from "styled-components"
 import Device from "../../utils/Device"
 
 const Text = styled(motion.span)`
-  display: inline-block;
-  
-  font-family: "Reenie Beanie", cursive;
-  color: gray;
-  font-size: 1rem;
+  display: inline-block !important;
+
+  font-family: "Reenie Beanie", cursive !important;
+  color: gray !important;
+  font-size: 1rem !important;
 
   @media ${Device.min.Tablet} {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
   }
 
   @media ${Device.min.LaptopL} {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 `
 

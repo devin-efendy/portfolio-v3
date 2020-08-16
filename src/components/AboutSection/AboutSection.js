@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -9,19 +9,8 @@ import styled from "styled-components"
 
 import Device from "../../utils/Device"
 import Scribble from "../Text/Scribble"
-import SectionContainer from "../layout/SectionContainer"
-
-const SectionWrapper = styled(motion.section)`
-  background: #1b1b1b;
-  display: flex;
-
-  padding: 5rem 0;
-
-  justify-content: center;
-
-  /* overflow: scroll; */
-  /* height: 200vh; */
-`
+import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
+import PortfolioSection from "../layout/PortfolioSection"
 
 const ResponsiveContainer = styled(motion.div)`
   display: inline-grid;
@@ -131,31 +120,30 @@ const AboutSection = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible")
-      console.log("It's inView")
+      console.log("[#about]: in-view")
     }
   }, [controls, inView])
 
+  const elementVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 50 },
+  }
+
   return (
-    <SectionWrapper id="about">
+    <PortfolioSection id="about">
       <motion.div ref={ref} animate={controls} initial="hidden">
-        <SectionContainer>
+        <SectionResponsiveLayout>
           <ResponsiveContainer>
             <TitleContainer
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 },
-              }}
-              transition={{ duration: 1 }}
+              variants={elementVariants}
+              transition={{ duration: 0.5 }}
             >
               <motion.h2>about me</motion.h2>
             </TitleContainer>
 
             <TextContainer
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 },
-              }}
-              transition={{ duration: 1 }}
+              variants={elementVariants}
+              transition={{ duration: 0.5, delay: 0.25 }}
             >
               <Scribble>My strongest values </Scribble>
 
@@ -177,18 +165,15 @@ const AboutSection = () => {
             </TextContainer>
 
             <ImgContainer
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 },
-              }}
-              transition={{ duration: 1, delay: 0.5 }}
+              variants={elementVariants}
+              transition={{ duration: 0.5, delay: 0.5 }}
             >
               <ImgMobile fluid={sources} />
             </ImgContainer>
           </ResponsiveContainer>
-        </SectionContainer>
+        </SectionResponsiveLayout>
       </motion.div>
-    </SectionWrapper>
+    </PortfolioSection>
   )
 }
 

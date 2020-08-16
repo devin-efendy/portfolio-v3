@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Device from "../../utils/Device"
 
-const SectionResponsiveLayout = styled(motion.div)`
+const SectRespLayout = styled(motion.div)`
   width: 100%;
 
   padding: 0 2rem;
@@ -34,8 +34,8 @@ const SectionResponsiveLayout = styled(motion.div)`
   }
 `
 
-const SectionContainer = ({ children }) => {
-  return <SectionResponsiveLayout>{children}</SectionResponsiveLayout>
+const SectionResponsiveLayout = ({ children }) => {
+  return <SectRespLayout>{children}</SectRespLayout>
 }
 
-export default SectionContainer;
+export default SectionResponsiveLayout;
