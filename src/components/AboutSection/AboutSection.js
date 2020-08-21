@@ -19,7 +19,7 @@ const ResponsiveContainer = styled(motion.div)`
   justify-items: center;
 
   width: 100%;
-
+  
   grid-template-columns: auto;
 
   @media ${Device.min.Laptop} {
@@ -61,16 +61,16 @@ const ImgMobile = styled(motion.custom(Img))`
   margin: auto;
 
   @media ${Device.min.Laptop} {
-    max-width: 270px;
+    max-width: 250px;
   }
 
   @media ${Device.min.LaptopM} {
-    max-width: 300px;
+    max-width: 270px;
   }
 
-  @media ${Device.min.LaptopL} {
-    max-width: 350px;
-  }
+  // @media ${Device.min.LaptopL} {
+  //   max-width: 300px;
+  // }
 `
 const AboutHeading = styled(motion.h1)`
   text-align: left;
@@ -91,8 +91,9 @@ const AboutHeading = styled(motion.h1)`
 const AboutParagraph = styled(motion.p)`
   margin-bottom: 3rem;
   /* max-width: 500px; */
+  font-size: 18px;
 
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.65);
 
   text-align: left;
 `
@@ -131,14 +132,14 @@ const AboutSection = () => {
 
   return (
     <PortfolioSection id="about">
-      <motion.div ref={ref} animate={controls} initial="hidden">
+      <motion.div ref={ref} animate={controls} initial="hidden" style={{width: "100%"}}>
         <SectionResponsiveLayout>
           <ResponsiveContainer>
             <TitleContainer
               variants={elementVariants}
               transition={{ duration: 0.5 }}
             >
-              <motion.h2>about me</motion.h2>
+              <motion.h3>about me</motion.h3>
             </TitleContainer>
 
             <TextContainer

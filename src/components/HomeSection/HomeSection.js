@@ -3,15 +3,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
 import Scribble from "../Text/Scribble"
-
-const SectionWrapper = styled(motion.section)`
-  background: #1b1b1b;
-  display: flex;
-  height: 100vh;
-
-  align-items: center;
-  justify-content: center;
-`
+import PortfolioSection from "../layout/PortfolioSection"
 
 const Container = styled(motion.div)`
   display: flex;
@@ -53,22 +45,24 @@ const IntroText = styled(motion.p)`
 
   padding: 0 2rem;
 
+  font-size: 18px;  
+
   @media ${Device.min.Tablet} {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
 
   @media ${Device.min.LaptopL} {
-    font-size: 1.3rem;
+    font-size: 20px;
     margin-bottom: 4rem;
   }
 `
 
 const LineBreak = styled.br`
   display: none;
-
+/* 
   @media ${Device.min.Tablet} {
     display: inline-block;
-  }
+  } */
 `
 
 const ExploreButton = styled(motion.button)`
@@ -102,10 +96,10 @@ const ExploreButton = styled(motion.button)`
 
 const HomeSection = () => {
   return (
-    <SectionWrapper id="home">
+    <PortfolioSection id="home" style={{height: "100vh"}}>
       <Container
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
+        transition={{ delay: 0.75, duration: 1, ease: "easeOut" }}
       >
         <motion.div>
           <Scribble
@@ -126,7 +120,7 @@ const HomeSection = () => {
         <IntroText>
           I like to play around and tinker with tech {" "} 
           <LineBreak />
-          and also, build all kind of things with it.
+          and build things with it.
         </IntroText>
 
         <motion.a whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.975 }}>
@@ -137,7 +131,7 @@ const HomeSection = () => {
           let's explore together, shall we? ⤵
         </Scribble>
       </Container>
-    </SectionWrapper>
+    </PortfolioSection>
   )
 }
 

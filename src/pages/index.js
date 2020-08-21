@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import FramerNavigation from "../components/Navigation/FramerNavigation"
 import HomeSection from "../components/HomeSection/HomeSection"
 import AboutSection from "../components/AboutSection/AboutSection"
+import ExperienceSection from "../components/ExperienceSection/ExperienceSection"
+
 import SocialNav from "../components/Navigation/SocialNav"
 import FixedLogo from "../components/Navigation/FixedLogo"
 
@@ -52,6 +54,7 @@ const IndexPage = () => {
 
       <HomeSection />
       <AboutSection />
+      <ExperienceSection />
     </motion.div>
   )
 }

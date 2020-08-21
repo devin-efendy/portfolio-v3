@@ -45,22 +45,18 @@ const MotionA = styled(motion.a)`
   }
 
   @media ${Device.min.LaptopXL} {
-    font-size: 1.2rem;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
+  /* @media ${Device.min.Desktop} {
     svg {
       width: 40px;
       height: 40px;
     }
-  }
-
-  @media ${Device.min.Desktop} {
-    font-size: 1.2rem;
-
-    svg {
-      width: 40px;
-      height: 40px;
-    }
-  }
+  } */
 `
 
 const liVariants = {
