@@ -16,7 +16,13 @@ const ResponsiveContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
 
-  width: 100%;
+  margin: 0 auto;
+
+  max-width: 700px;
+
+  @media ${Device.min.FHD} {
+    max-width: 800px;
+  }
 `
 
 const JobGridContainer = styled(motion.div)`
@@ -31,7 +37,30 @@ const JobItem = styled(motion.div)`
 
   width: 100%;
 
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 100px auto;
+  grid-template-rows: auto auto auto;
+`
+
+const JobTitle = styled(motion.h3)`
+  grid-column: 2;
+  grid-row: 1;
+
+  font-size: 1rem;
+
+  justify-self: start;
+`
+
+const JobDuration = styled(motion.p)`
+  grid-column: 2;
+  grid-row: 2;
+
+  justify-self: start;
+`
+
+const JobDesc = styled(motion.p)`
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
 `
 
 const TitleContainer = styled(motion.div)`
@@ -115,11 +144,13 @@ const ExperienceSection = () => {
             <JobGridContainer>
               <JobItem
                 variants={elementVariants}
-                transition={{ duration: 0.5, delay: 0.50 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
               >
                 {" "}
                 <span>IMAGE</span>
-                <span>Desc</span>
+                <JobTitle>Software Developer Co-op at Bold Commerce</JobTitle>
+                <JobDuration>May 2020 - August 2020</JobDuration>
+                <JobDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</JobDesc>
               </JobItem>
               <JobItem
                 variants={elementVariants}
@@ -127,7 +158,9 @@ const ExperienceSection = () => {
               >
                 {" "}
                 <span>IMAGE</span>
-                <span>Desc</span>
+                <JobTitle>Teaching Assistant at University of Manitoba</JobTitle>
+                <JobDuration>September 2019 - December 2019</JobDuration>
+                <JobDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</JobDesc>
               </JobItem>
             </JobGridContainer>
           </ResponsiveContainer>

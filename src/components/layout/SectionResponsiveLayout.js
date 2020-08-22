@@ -6,7 +6,6 @@ import Device from "../../utils/Device"
 
 const SectRespLayout = styled(motion.div)`
   width: 100%;
-
   padding: 0 2rem;
 
   @media ${Device.min.Tablet} {
