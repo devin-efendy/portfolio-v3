@@ -37,8 +37,17 @@ const JobItem = styled(motion.div)`
 
   width: 100%;
 
+  margin: 1.5rem 0;
+
   grid-template-columns: 100px auto;
   grid-template-rows: auto auto auto;
+`
+
+const JobCompanyLogo = styled(motion.custom(Img))`
+  grid-column: 1;
+  grid-row: 1/3;
+  width: 50px;
+  // height: 100%;
 `
 
 const JobTitle = styled(motion.h3)`
@@ -61,6 +70,8 @@ const JobDesc = styled(motion.p)`
   grid-column: 2;
   grid-row: 3;
   justify-self: start;
+
+  padding-top: 0.7rem;
 `
 
 const TitleContainer = styled(motion.div)`
@@ -74,7 +85,7 @@ const AboutHeading = styled(motion.h1)`
   max-width: 400px;
   font-size: 1.5rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   background-image: linear-gradient(135deg, #28c76f 10%, #81fbb8 100%);
   -webkit-background-clip: text;
@@ -89,7 +100,14 @@ const ExperienceSection = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        mobileAboutImage: file(relativePath: { eq: "about-img-sqr.png" }) {
+        boldLogo: file(relativePath: { eq: "logo/bold-logo.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 700, maxHeight: 700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        umLogo: file(relativePath: { eq: "logo/um-logo.png" }) {
           childImageSharp {
             fluid(maxWidth: 700, maxHeight: 700) {
               ...GatsbyImageSharpFluid
@@ -100,7 +118,10 @@ const ExperienceSection = () => {
     `
   )
 
-  const sources = [data.mobileAboutImage.childImageSharp.fluid]
+  const boldLogo = [data.boldLogo.childImageSharp.fluid]
+  const umLogo = [data.umLogo.childImageSharp.fluid]
+
+  console.log(data)
 
   const controls = useAnimation()
   const [ref, inView] = useInView({ threshold: 0.3 })
@@ -138,7 +159,7 @@ const ExperienceSection = () => {
               variants={elementVariants}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              Places that helped me grow professionaly.
+              Places that I've worked at before
             </AboutHeading>
 
             <JobGridContainer>
@@ -146,21 +167,31 @@ const ExperienceSection = () => {
                 variants={elementVariants}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                {" "}
-                <span>IMAGE</span>
+                <JobCompanyLogo fluid={boldLogo} />
                 <JobTitle>Software Developer Co-op at Bold Commerce</JobTitle>
                 <JobDuration>May 2020 - August 2020</JobDuration>
-                <JobDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</JobDesc>
+                <JobDesc>
+                  At Bold, I was working in Checkout Plugin & API team. The team
+                  develops plugin features and API endpoints for Bold Checkout.
+                  One of my important resposibility is to maintain Bold's Social
+                  Discount plugin which is a plugin that gives customer discount
+                  when they share their purchases to Facebook or Twitter. The
+                  technologies that I used are PHP/Laravel, JavaScript, MySQL,
+                  and Docker.
+                </JobDesc>
               </JobItem>
               <JobItem
                 variants={elementVariants}
                 transition={{ duration: 0.5, delay: 0.75 }}
               >
-                {" "}
-                <span>IMAGE</span>
-                <JobTitle>Teaching Assistant at University of Manitoba</JobTitle>
+                <JobCompanyLogo fluid={umLogo} />
+                <JobTitle>
+                  Teaching Assistant at University of Manitoba
+                </JobTitle>
                 <JobDuration>September 2019 - December 2019</JobDuration>
-                <JobDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</JobDesc>
+                <JobDesc>
+                  I conducted lab sessions and guided students to understand lab materials and to solve lab assignments while ensuring best programming practices. Additionaly, I helped student with C and UNIX.
+                </JobDesc>
               </JobItem>
             </JobGridContainer>
           </ResponsiveContainer>

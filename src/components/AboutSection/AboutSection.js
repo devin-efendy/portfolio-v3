@@ -149,7 +149,7 @@ const AboutSection = () => {
               <Scribble>My strongest values </Scribble>
 
               <AboutHeading>
-                Driven, passionate, dedicated, and curious software developer /
+                Driven, passionate, and dedicated software developer /
                 CS Student.
               </AboutHeading>
 
@@ -160,8 +160,8 @@ const AboutSection = () => {
                 I'm a fourth year Computer Science (Co-op) Honours student at
                 the University of Manitoba. I have been very passionate about
                 all things tech. Especially, in area such as Software
-                Engineering, Web Development, and UI/UX Design. But, I would be
-                happy to explore other areas too!
+                Engineering, Web Development, and UI/UX Design. I would be
+                very happy to explore other areas too!
               </AboutParagraph>
             </TextContainer>
 
