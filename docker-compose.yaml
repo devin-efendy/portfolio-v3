@@ -1,0 +1,17 @@
+version: "3" 
+
+services: 
+  gatsby-portfolio-local: 
+    image: "gatsby-portfolio"
+    container_name: "gatsby-portfolio-local"
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+    - /app/node_modules  
+    - .:/app 
+    ports: 
+    - "8000:8000"
+    - "3000:3000"
+    - "9929:9929"
+    - "9230:9230"
