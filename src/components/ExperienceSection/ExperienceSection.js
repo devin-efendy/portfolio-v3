@@ -21,7 +21,7 @@ const ResponsiveContainer = styled(motion.div)`
   max-width: 700px;
 
   @media ${Device.min.FHD} {
-    max-width: 800px;
+    max-width: 900px;
   }
 `
 
