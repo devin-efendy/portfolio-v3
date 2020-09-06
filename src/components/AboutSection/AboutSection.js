@@ -116,7 +116,7 @@ const AboutSection = () => {
   const sources = [data.mobileAboutImage.childImageSharp.fluid]
 
   const controls = useAnimation()
-  const [ref, inView] = useInView({ threshold: 0.3 })
+  const [ref, inView] = useInView({ threshold: 0.2 })
 
   useEffect(() => {
     if (inView) {

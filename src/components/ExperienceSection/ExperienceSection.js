@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
 
 import Device from "../../utils/Device"
-import Scribble from "../Text/Scribble"
+// import Scribble from "../Text/Scribble"
 import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
 import PortfolioSection from "../layout/PortfolioSection"
 
@@ -18,7 +18,7 @@ const ResponsiveContainer = styled(motion.div)`
 
   margin: 0 auto;
 
-  max-width: 700px;
+  max-width: 800px;
 
   @media ${Device.min.FHD} {
     max-width: 900px;
@@ -67,6 +67,8 @@ const JobDuration = styled(motion.p)`
 `
 
 const JobDesc = styled(motion.p)`
+  color: rgba(255, 255, 255, 0.65);
+
   grid-column: 2;
   grid-row: 3;
   justify-self: start;
@@ -121,10 +123,8 @@ const ExperienceSection = () => {
   const boldLogo = [data.boldLogo.childImageSharp.fluid]
   const umLogo = [data.umLogo.childImageSharp.fluid]
 
-  console.log(data)
-
   const controls = useAnimation()
-  const [ref, inView] = useInView({ threshold: 0.3 })
+  const [ref, inView] = useInView({ threshold: 0.2 })
 
   useEffect(() => {
     if (inView) {
@@ -159,7 +159,7 @@ const ExperienceSection = () => {
               variants={elementVariants}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              Places that I've worked at before
+              I have the desire to grow professionally and eager to learn from the industry experts.
             </AboutHeading>
 
             <JobGridContainer>

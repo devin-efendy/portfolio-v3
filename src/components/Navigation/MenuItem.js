@@ -116,7 +116,7 @@ const MenuItem = ({ i }) => {
   const icons = [
     homeIcon(),
     userIcon(),
-    toolsIcon(),
+    // toolsIcon(),
     bracesIcon(),
     laptopIcon(),
     phoneIcon(),
@@ -125,7 +125,7 @@ const MenuItem = ({ i }) => {
   const navText = [
     "Home",
     "About",
-    "Skills",
+    // "Skills",
     "Projects",
     "Experience",
     "Contact",
@@ -152,9 +152,9 @@ const homeIcon = () => {
 const userIcon = () => {
   return <TablerIcon.UserIcon variants={svgVariant} />
 }
-const toolsIcon = () => {
-  return <TablerIcon.ToolsIcon variants={svgVariant} />
-}
+// const toolsIcon = () => {
+//   return <TablerIcon.ToolsIcon variants={svgVariant} />
+// }
 const bracesIcon = () => {
   return <TablerIcon.BracesIcon variants={svgVariant} />
 }

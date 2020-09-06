@@ -5,13 +5,17 @@ import { motion } from "framer-motion"
 
 // import typography from "../utils/typography"
 import SEO from "../components/seo"
+
 import FramerNavigation from "../components/Navigation/FramerNavigation"
+import SocialNav from "../components/Navigation/SocialNav"
+import FixedLogo from "../components/Navigation/FixedLogo"
+
 import HomeSection from "../components/HomeSection/HomeSection"
 import AboutSection from "../components/AboutSection/AboutSection"
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection"
+import ProjectSection from "../components/ProjectSection/ProjectSection"
 
-import SocialNav from "../components/Navigation/SocialNav"
-import FixedLogo from "../components/Navigation/FixedLogo"
+import useProjectQuery from "../graphql/ProjectQuery"
 
 const Global = createGlobalStyle`
   body, p, h1, h2, h3, a { 
@@ -41,7 +45,6 @@ const Global = createGlobalStyle`
 
 const IndexPage = () => {
   // const [nav, showNav] = useState(false)
-
   return (
     <motion.div>
       <SEO title="Home" />
@@ -55,6 +58,7 @@ const IndexPage = () => {
       <HomeSection />
       <AboutSection />
       <ExperienceSection />
+      <ProjectSection projectList={useProjectQuery()}/>
     </motion.div>
   )
 }

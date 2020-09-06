@@ -16,10 +16,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `logos`,
-        path: `${__dirname}/src/images/logo`,
+        path: `${__dirname}/src/markdown`,
+        name: `markdown-data`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
