@@ -84,15 +84,30 @@ const SocialNav = () => {
   return (
     <motion.div initial="hold" animate="start">
       <SocialContainer variants={SocialVariants}>
-        <SocialLink whileHover={{ color: "#abdcff" }} variants={LinkVariants}>
+        <SocialLink
+          href="https://www.linkedin.com/in/devinefendy/"
+          target="_blank"
+          whileHover={{ color: "#abdcff" }}
+          variants={LinkVariants}
+        >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SocialLink>
 
-        <SocialLink whileHover={{ color: "#abdcff" }} variants={LinkVariants}>
+        <SocialLink
+          href="https://github.com/devin-efendy"
+          target="_blank"
+          whileHover={{ color: "#abdcff" }}
+          variants={LinkVariants}
+        >
           <FontAwesomeIcon icon={faGithub} />
         </SocialLink>
 
-        <SocialLink whileHover={{ color: "#abdcff" }} variants={LinkVariants}>
+        <SocialLink
+          href="mailto:devinefendy.dev@gmail.com"
+          target="_blank"
+          whileHover={{ color: "#abdcff" }}
+          variants={LinkVariants}
+        >
           <FontAwesomeIcon icon={faPaperPlane} />
         </SocialLink>
       </SocialContainer>
