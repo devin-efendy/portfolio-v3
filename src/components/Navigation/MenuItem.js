@@ -110,7 +110,7 @@ const textVariant = {
   },
 }
 
-const MenuItem = ({ i }) => {
+const MenuItem = ({ i, toggle }) => {
   // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 
   const icons = [
@@ -138,6 +138,7 @@ const MenuItem = ({ i }) => {
         initial="rest"
         whileHover="hover"
         animate="rest"
+        onClick={toggle}
       >
         <span>{icons[i]}</span>
         <motion.span variants={textVariant}>{navText[i]}</motion.span>
