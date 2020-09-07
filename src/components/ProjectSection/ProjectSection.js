@@ -9,6 +9,7 @@ import Device from "../../utils/Device"
 import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
 import PortfolioSection from "../layout/PortfolioSection"
 import Project from "./Project"
+import Scribble from "../Text/Scribble"
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -16,7 +17,12 @@ const ResponsiveContainer = styled(motion.div)`
 
   margin: 0 auto;
 
-  @media ${Device.min.FHD} {
+  a {
+    color: #abdcff;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `
 
@@ -62,7 +68,7 @@ const ProjectSection = ({ projectList }) => {
     hidden: { opacity: 0, y: 50 },
   }
 
-  var projectDelay = 0.25
+  var projectDelay = 0.5
 
   const renderProjectList = projectList.map(project => {
     return (
@@ -95,8 +101,28 @@ const ProjectSection = ({ projectList }) => {
               variants={elementVariants}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              These are things that I have built. I think the best way to learn is to build something.
+              These are things that I have built. I think the best way to learn
+              is to build something.
             </AboutHeading>
+
+            <motion.span
+              variants={elementVariants}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <Scribble>
+                Checkout my <b>GitHub</b> profile
+              </Scribble>
+              &nbsp;&nbsp;
+              <a
+                href="https://github.com/devin-efendy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @devin-efendy
+              </a>
+              &nbsp;&nbsp;
+              <Scribble>for more projects!</Scribble>
+            </motion.span>
 
             <ShowcaseContainer>{renderProjectList}</ShowcaseContainer>
           </ResponsiveContainer>

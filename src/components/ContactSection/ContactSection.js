@@ -6,9 +6,9 @@ import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
 
 import Device from "../../utils/Device"
-// import Scribble from "../Text/Scribble"
 import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
 import PortfolioSection from "../layout/PortfolioSection"
+import Scribble from "../Text/Scribble"
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -109,8 +109,9 @@ const ContactSection = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <ContactParagraph>
-                I'm currently looking for internship/co-op opportunities. If you are
-                interested or have any questions, feel free to reach me at my{" "}
+                I'm currently looking for internship/co-op opportunities. If you
+                are interested or have any questions, feel free to reach me at
+                my{" "}
                 <a
                   href="mailto:efendyd@myumanitoba.ca"
                   target="_blank"
@@ -118,7 +119,7 @@ const ContactSection = () => {
                 >
                   e-mail
                 </a>{" "}
-                and{" "}
+                or{" "}
                 <a
                   href="https://www.linkedin.com/in/devinefendy/"
                   target="_blank"
@@ -128,6 +129,18 @@ const ContactSection = () => {
                 </a>
                 !
               </ContactParagraph>
+
+              <motion.div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "start",
+                }}
+                variants={elementVariants}
+                transition={{ duration: 0.5, delay: 0.75 }}
+              >
+                <Scribble>I hope to hear from you!</Scribble>
+              </motion.div>
             </TextContainer>
           </ResponsiveContainer>
         </SectionResponsiveLayout>

@@ -1,12 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-
 import { motion } from "framer-motion"
-
-import styled from "styled-components"
-
-import Device from "../../utils/Device"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDesktop } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -21,6 +15,11 @@ import {
   faCss3,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons"
+
+import ReactTooltip from "react-tooltip"
+
+import styled from "styled-components"
+import Device from "../../utils/Device"
 
 const ProjectContainer = styled(motion.div)`
   display: flex;
@@ -148,7 +147,10 @@ const Project = ({ projectObject, transDelay }) => {
   })
 
   return (
-    <motion.div variants={elementVariants} transition={{ duration: 0.5, delay: transDelay }}>
+    <motion.div
+      variants={elementVariants}
+      transition={{ duration: 0.5, delay: transDelay }}
+    >
       <ProjectContainer>
         <ProjectImage fluid={imageSharp} />
         <ProjectDetails>
@@ -186,28 +188,59 @@ const Project = ({ projectObject, transDelay }) => {
 }
 
 const getTechIcon = str => {
+  var selectedIcon = null
+  var selectedString = ""
   switch (str) {
     case "js":
-      return <FontAwesomeIcon icon={faJs} size="lg" />
+      selectedIcon = faJs
+      selectedString = "JavaScript"
+      break
     case "html":
-      return <FontAwesomeIcon icon={faHtml5} size="lg" />
+      selectedIcon = faHtml5
+      selectedString = "HTML"
+      break
     case "css":
-      return <FontAwesomeIcon icon={faCss3} size="lg" />
+      selectedIcon = faCss3
+      selectedString = "CSS"
+      break
     case "bootstrap":
-      return <FontAwesomeIcon icon={faBootstrap} size="lg" />
+      selectedIcon = faBootstrap
+      selectedString = "Bootstrap"
+      break
     case "react":
-      return <FontAwesomeIcon icon={faReact} size="lg" />
+      selectedIcon = faReact
+      selectedString = "React"
+      break
     case "aws":
-      return <FontAwesomeIcon icon={faAws} size="lg" />
+      selectedIcon = faAws
+      selectedString = "AWS Amplify"
+      break
     case "docker":
-      return <FontAwesomeIcon icon={faDocker} size="lg" />
+      selectedIcon = faDocker
+      selectedString = "Docker"
+      break
     case "android":
-      return <FontAwesomeIcon icon={faAndroid} size="lg" />
+      selectedIcon = faAndroid
+      selectedString = "Android"
+      break
     case "java":
-      return <FontAwesomeIcon icon={faJava} size="lg" />
+      selectedIcon = faJava
+      selectedString = "Java"
+      break
     default:
       return str
   }
+
+  return (
+    <div>
+      <FontAwesomeIcon
+        icon={selectedIcon}
+        size="lg"
+        data-tip={selectedString}
+      />
+      <ReactTooltip effect="solid" border borderColor="#abdcff" />
+    </div>
+  )
 }
 
 export default Project

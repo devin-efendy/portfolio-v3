@@ -161,8 +161,7 @@ const AboutSection = () => {
               <Scribble>My strongest values </Scribble>
 
               <AboutHeading>
-                Driven, passionate, and dedicated software developer / CS
-                Student.
+                Driven, passionate, and dedicated software developer
               </AboutHeading>
 
               <Scribble style={{ width: "100%", textAlign: "right" }}>

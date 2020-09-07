@@ -16,9 +16,8 @@ const ResponsiveContainer = styled(motion.div)`
   align-items: center;
 
   margin: 0 auto;
-
-  max-width: 400px;
 `
+
 const FooterText = styled(motion.p)`
   margin-bottom: 3rem;
   font-size: 18px !important;
@@ -46,8 +45,14 @@ const Footer = () => {
         <ResponsiveContainer>
           <FooterText>
             {" "}
-            <Scribble>This website is built by</Scribble>{" "}
-            <a href="https://github.com/devin-efendy" target="_blank" rel="noreferrer">@devin-efendy</a>
+            <Scribble>This website is created by</Scribble>{" "}
+            <a
+              href="https://github.com/devin-efendy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @devin-efendy
+            </a>
             <Scribble>, 2020</Scribble>
           </FooterText>
         </ResponsiveContainer>
