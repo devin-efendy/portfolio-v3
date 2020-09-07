@@ -171,11 +171,11 @@ const AboutSection = () => {
               </Scribble>
               <AboutParagraph>
                 I'm a fourth year Computer Science Honours{" "}
-                <a href="http://coop.cs.umanitoba.ca/" target="_blank">
+                <a href="http://coop.cs.umanitoba.ca/" target="_blank" rel="noreferrer">
                   (Co-op)
                 </a>{" "}
                 student at the{" "}
-                <a href="https://www.sci.umanitoba.ca/cs/" target="_blank">
+                <a href="https://www.sci.umanitoba.ca/cs/" target="_blank" rel="noreferrer">
                   University of Manitoba
                 </a>
                 . I have been very passionate about all things tech. Especially,
@@ -184,7 +184,7 @@ const AboutSection = () => {
                 <br />
                 <br />I enjoy going to Hackathons and programming
                 contests. Earlier this year, I went to Montreal to attend{" "}
-                <a href="http://2020.cusec.net/#/" target="_blank">
+                <a href="http://2020.cusec.net/#/" target="_blank" rel="noreferrer">
                   CUSEC 2020
                 </a>
                 .

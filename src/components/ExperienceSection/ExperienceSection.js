@@ -181,7 +181,7 @@ const ExperienceSection = () => {
                 <JobCompanyLogo fluid={boldLogo} />
                 <JobTitle>
                   Software Developer Co-op at{" "}
-                  <a href="https://boldcommerce.com/" target="_blank">
+                  <a href="https://boldcommerce.com/" target="_blank" rel="noreferrer">
                     Bold Commerce
                   </a>
                 </JobTitle>
@@ -189,7 +189,7 @@ const ExperienceSection = () => {
                 <JobDesc>
                   At Bold, I was working in Checkout Plugin & API team. The team
                   develops plugin features and API endpoints for{" "}
-                  <a href="https://boldcommerce.com/checkout" target="_blank">
+                  <a href="https://boldcommerce.com/checkout" target="_blank" rel="noreferrer">
                     Bold Checkout
                   </a>
                   . One of my important resposibility is to maintain Bold's
@@ -206,7 +206,7 @@ const ExperienceSection = () => {
                 <JobCompanyLogo fluid={umLogo} />
                 <JobTitle>
                   Teaching Assistant at{" "}
-                  <a href="https://www.sci.umanitoba.ca/cs/" target="_blank">
+                  <a href="https://www.sci.umanitoba.ca/cs/" target="_blank" rel="noreferrer">
                     University of Manitoba
                   </a>
                 </JobTitle>
