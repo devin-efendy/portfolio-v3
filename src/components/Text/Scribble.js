@@ -8,14 +8,11 @@ const Text = styled(motion.span)`
   
   font-family: "Reenie Beanie", cursive !important;
   color: gray !important;
-  font-size: 1rem !important;
 
-  @media ${Device.min.Tablet} {
-    font-size: 1.2rem !important;
-  }
+  font-size: 23px !important;
 
-  @media ${Device.min.LaptopL} {
-    font-size: 1.3rem !important;
+  @media ${Device.min.Laptop} {
+    font-size: 30px !important;
   }
 `
 
