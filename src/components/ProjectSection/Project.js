@@ -132,6 +132,7 @@ const Tech = styled(motion.div)`
   font-size: 1.3rem;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.65);
 `
 
 const elementVariants = {
@@ -143,7 +144,11 @@ const Project = ({ projectObject, transDelay }) => {
   const { title, tech, demo, source, imageSharp, html } = projectObject
 
   const techList = tech.map(i => {
-    return <Tech key={i}>{getTechIcon(i)}</Tech>
+    return (
+      <Tech key={i} whileHover={{ color: "rgba(255,255,255,1)" }}>
+        {getTechIcon(i)}
+      </Tech>
+    )
   })
 
   return (
@@ -238,7 +243,7 @@ const getTechIcon = str => {
         size="lg"
         data-tip={selectedString}
       />
-      <ReactTooltip effect="solid" border borderColor="#abdcff" />
+      <ReactTooltip effect="solid" border borderColor="#abdcff" while />
     </div>
   )
 }
