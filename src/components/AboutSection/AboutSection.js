@@ -169,23 +169,36 @@ const AboutSection = () => {
               </Scribble>
               <AboutParagraph>
                 I'm a fourth year Computer Science Honours{" "}
-                <a href="http://coop.cs.umanitoba.ca/" target="_blank" rel="noreferrer">
+                <a
+                  href="http://coop.cs.umanitoba.ca/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   (Co-op)
                 </a>{" "}
                 student at the{" "}
-                <a href="https://www.sci.umanitoba.ca/cs/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.sci.umanitoba.ca/cs/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   University of Manitoba
                 </a>
-                . I have been very passionate about all things tech. Especially,
-                in area such as Software Engineering and Web Development. I
-                would be very happy to explore other areas too!
+                . I have always been intrigued by technology and Computer Science. Especially, in
+                area such as Software Engineering and Web Development. I would
+                be very happy to explore other areas too!
                 <br />
-                <br />I enjoy going to Hackathons and programming
-                contests. Earlier this year, I went to Montreal to attend{" "}
-                <a href="http://2020.cusec.net/#/" target="_blank" rel="noreferrer">
+                <br />I enjoy going to Hackathons and programming contests.
+                Earlier this year, I went to Montreal to attend{" "}
+                <a
+                  href="http://2020.cusec.net/#/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   CUSEC 2020
                 </a>
-                .
+                . When I'm not doing CS related stuff, I like to spend my time
+                playing guitar 🎸 and basketball 🏀.
               </AboutParagraph>
             </TextContainer>
 
