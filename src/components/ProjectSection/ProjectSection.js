@@ -54,7 +54,6 @@ const ProjectSection = ({ projectList }) => {
   useEffect(() => {
     if (inView) {
       controls.start("visible")
-      console.log("[#projects]: in-view")
     }
   }, [controls, inView])
 

@@ -89,6 +89,7 @@ const SocialNav = () => {
           target="_blank"
           whileHover={{ color: "#abdcff" }}
           variants={LinkVariants}
+          rel="noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SocialLink>
@@ -98,15 +99,17 @@ const SocialNav = () => {
           target="_blank"
           whileHover={{ color: "#abdcff" }}
           variants={LinkVariants}
+          rel="noreferrer"
         >
           <FontAwesomeIcon icon={faGithub} />
         </SocialLink>
 
         <SocialLink
-          href="mailto:devinefendy.dev@gmail.com"
+          href="mailto:efendyd@myumanitoba.ca"
           target="_blank"
           whileHover={{ color: "#abdcff" }}
           variants={LinkVariants}
+          rel="noreferrer"
         >
           <FontAwesomeIcon icon={faPaperPlane} />
         </SocialLink>

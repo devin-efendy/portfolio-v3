@@ -97,9 +97,9 @@ const AboutHeading = styled(motion.h1)`
   /* max-width: 400px; */
   font-size: 1.5rem;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
-  background-image: linear-gradient(135deg, #28c76f 10%, #81fbb8 100%);
+  background-image: linear-gradient(135deg, #28c76f, #81fbb8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -139,7 +139,6 @@ const ExperienceSection = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible")
-      console.log("[#experience]: in-view")
     }
   }, [controls, inView])
 

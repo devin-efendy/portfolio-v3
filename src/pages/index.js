@@ -14,6 +14,8 @@ import ExperienceSection from "../components/ExperienceSection/ExperienceSection
 import ProjectSection from "../components/ProjectSection/ProjectSection"
 
 import useProjectQuery from "../graphql/ProjectQuery"
+import ContactSection from "../components/ContactSection/ContactSection"
+import Footer from "../components/Footer"
 
 const Global = createGlobalStyle`
   body, p, h1, h2, h3, a { 
@@ -42,7 +44,6 @@ const Global = createGlobalStyle`
 `
 
 const IndexPage = () => {
-
   return (
     <motion.div>
       <SEO title="Software Developer" />
@@ -54,10 +55,14 @@ const IndexPage = () => {
       <SocialNav />
 
       <HomeSection />
-      <AboutSection/>
+      <AboutSection />
       <ExperienceSection />
-      
-      <ProjectSection projectList={useProjectQuery()}/>
+
+      <ProjectSection projectList={useProjectQuery()} />
+
+      <ContactSection />
+
+      <Footer />
     </motion.div>
   )
 }

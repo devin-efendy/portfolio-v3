@@ -77,7 +77,7 @@ const AboutHeading = styled(motion.h1)`
   max-width: 400px;
   font-size: 1.5rem;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   background-image: linear-gradient(135deg, #ea5455 10%, #feb692 100%);
   -webkit-background-clip: text;
@@ -129,7 +129,6 @@ const AboutSection = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible")
-      console.log("[#about]: in-view")
     }
   }, [controls, inView])
 
