@@ -11,7 +11,7 @@ const Text = styled(motion.span)`
 
   font-size: 23px !important;
 
-  @media ${Device.min.Laptop} {
+  @media ${Device.min.LaptopL} {
     font-size: 30px !important;
   }
 `
