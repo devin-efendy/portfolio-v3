@@ -27,6 +27,14 @@ const ResponsiveContainer = styled(motion.div)`
 
 const JobGridContainer = styled(motion.div)`
   width: 100%;
+
+  a {
+    color: #abdcff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `
 
 const JobItem = styled(motion.div)`
@@ -161,7 +169,8 @@ const ExperienceSection = () => {
               variants={elementVariants}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              I have the desire to grow professionally and eager to learn from the industry experts.
+              I have the desire to grow professionally and eager to learn from
+              the industry experts.
             </AboutHeading>
 
             <JobGridContainer>
@@ -170,16 +179,24 @@ const ExperienceSection = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <JobCompanyLogo fluid={boldLogo} />
-                <JobTitle>Software Developer Co-op at Bold Commerce</JobTitle>
+                <JobTitle>
+                  Software Developer Co-op at{" "}
+                  <a href="https://boldcommerce.com/" target="_blank">
+                    Bold Commerce
+                  </a>
+                </JobTitle>
                 <JobDuration>May 2020 - August 2020</JobDuration>
                 <JobDesc>
                   At Bold, I was working in Checkout Plugin & API team. The team
-                  develops plugin features and API endpoints for Bold Checkout.
-                  One of my important resposibility is to maintain Bold's Social
-                  Discount plugin which is a plugin that gives customer discount
-                  when they share their purchases to Facebook or Twitter. The
-                  technologies that I used are PHP/Laravel, JavaScript, MySQL,
-                  and Docker.
+                  develops plugin features and API endpoints for{" "}
+                  <a href="https://boldcommerce.com/checkout" target="_blank">
+                    Bold Checkout
+                  </a>
+                  . One of my important resposibility is to maintain Bold's
+                  Social Discount plugin which is a plugin that gives customer
+                  discount when they share their purchases to Facebook or
+                  Twitter. The technologies that I used are PHP/Laravel,
+                  JavaScript, MySQL, and Docker.
                 </JobDesc>
               </JobItem>
               <JobItem
@@ -188,11 +205,17 @@ const ExperienceSection = () => {
               >
                 <JobCompanyLogo fluid={umLogo} />
                 <JobTitle>
-                  Teaching Assistant at University of Manitoba
+                  Teaching Assistant at{" "}
+                  <a href="https://www.sci.umanitoba.ca/cs/" target="_blank">
+                    University of Manitoba
+                  </a>
                 </JobTitle>
                 <JobDuration>September 2019 - December 2019</JobDuration>
                 <JobDesc>
-                  I conducted lab sessions and guided students to understand lab materials and to solve lab assignments while ensuring best programming practices. Additionaly, I helped student with C and UNIX.
+                  I conducted lab sessions and guided students to understand lab
+                  materials and to solve lab assignments while ensuring best
+                  programming practices. Additionaly, I helped student with C
+                  and UNIX.
                 </JobDesc>
               </JobItem>
             </JobGridContainer>

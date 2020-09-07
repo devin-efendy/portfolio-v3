@@ -19,7 +19,7 @@ const ResponsiveContainer = styled(motion.div)`
   justify-items: center;
 
   width: 100%;
-  
+
   grid-template-columns: auto;
 
   @media ${Device.min.Laptop} {
@@ -96,6 +96,14 @@ const AboutParagraph = styled(motion.p)`
   color: rgba(255, 255, 255, 0.65);
 
   text-align: left;
+
+  a {
+    color: #abdcff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `
 
 const AboutSection = () => {
@@ -132,7 +140,12 @@ const AboutSection = () => {
 
   return (
     <PortfolioSection id="about">
-      <motion.div ref={ref} animate={controls} initial="hidden" style={{width: "100%"}}>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        style={{ width: "100%" }}
+      >
         <SectionResponsiveLayout>
           <ResponsiveContainer>
             <TitleContainer
@@ -149,19 +162,32 @@ const AboutSection = () => {
               <Scribble>My strongest values </Scribble>
 
               <AboutHeading>
-                Driven, passionate, and dedicated software developer /
-                CS Student.
+                Driven, passionate, and dedicated software developer / CS
+                Student.
               </AboutHeading>
 
               <Scribble style={{ width: "100%", textAlign: "right" }}>
                 A little bit about myself
               </Scribble>
               <AboutParagraph>
-                I'm a fourth year Computer Science (Co-op) Honours student at
-                the University of Manitoba. I have been very passionate about
-                all things tech. Especially, in area such as Software
-                Engineering, Web Development, and UI/UX Design. I would be
-                very happy to explore other areas too!
+                I'm a fourth year Computer Science Honours{" "}
+                <a href="http://coop.cs.umanitoba.ca/" target="_blank">
+                  (Co-op)
+                </a>{" "}
+                student at the{" "}
+                <a href="https://www.sci.umanitoba.ca/cs/" target="_blank">
+                  University of Manitoba
+                </a>
+                . I have been very passionate about all things tech. Especially,
+                in area such as Software Engineering and Web Development. I
+                would be very happy to explore other areas too!
+                <br />
+                <br />I enjoy going to Hackathons and programming
+                contests. Earlier this year, I went to Montreal to attend{" "}
+                <a href="http://2020.cusec.net/#/" target="_blank">
+                  CUSEC 2020
+                </a>
+                .
               </AboutParagraph>
             </TextContainer>
 
