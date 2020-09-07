@@ -98,7 +98,7 @@ const AboutParagraph = styled(motion.p)`
   text-align: left;
 `
 
-const AboutSection = ({onMount}) => {
+const AboutSection = () => {
   const data = useStaticQuery(
     graphql`
       query {

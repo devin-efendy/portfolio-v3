@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Device from "../../utils/Device"
 import Scribble from "../Text/Scribble"
 import PortfolioSection from "../layout/PortfolioSection"
+import { Link } from "react-scroll"
 
 const Container = styled(motion.div)`
   display: flex;
@@ -45,7 +46,7 @@ const IntroText = styled(motion.p)`
 
   padding: 0 2rem;
 
-  font-size: 18px;  
+  font-size: 18px;
 
   @media ${Device.min.Tablet} {
     /* font-size: 1rem; */
@@ -94,9 +95,11 @@ const ExploreButton = styled(motion.button)`
   }
 `
 
+const CustomLink = styled(motion.custom(Link))``
+
 const HomeSection = () => {
   return (
-    <PortfolioSection id="home" style={{height: "100vh"}}>
+    <PortfolioSection id="home" style={{ height: "100vh" }}>
       <Container
         animate={{ opacity: 1 }}
         transition={{ delay: 0.75, duration: 1, ease: "easeOut" }}
@@ -118,17 +121,21 @@ const HomeSection = () => {
         </motion.div>
 
         <IntroText>
-          I like to play around and tinker with tech {" "} 
-          <LineBreak />
+          I like to play around and tinker with tech <LineBreak />
           and build things with it.
         </IntroText>
 
-        <motion.a whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.975 }}>
-          <ExploreButton>Explore</ExploreButton>
-        </motion.a>
+        <CustomLink to={"about"} spy={true} smooth={true}>
+          <ExploreButton
+            whileHover={{ scale: 1.025 }}
+            whileTap={{ scale: 0.975 }}
+          >
+            Explore
+          </ExploreButton>
+        </CustomLink>
 
         <Scribble style={{ marginTop: "1rem" }}>
-          let's explore together, shall we? ⤵
+          let's explore together!
         </Scribble>
       </Container>
     </PortfolioSection>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import TablerIcon from "../../utils/TablerIcon"
 import Device from "../../utils/Device"
-import { Link, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
 
 const MotionLi = styled(motion.li)`
   width: 100%;
@@ -51,13 +51,6 @@ const MotionA = styled(motion.span)`
       height: 30px;
     }
   }
-
-  /* @media ${Device.min.Desktop} {
-    svg {
-      width: 40px;
-      height: 40px;
-    }
-  } */
 `
 
 const liVariants = {

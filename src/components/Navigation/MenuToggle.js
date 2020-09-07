@@ -67,7 +67,7 @@ const MenuToggle = ({ toggle }) => {
           transition={{}}
         />
         <Path
-          d="M 15 25 42.5 25"
+          d="M 7.5 25 42.5 25"
           variants={{
             closed: { opacity: 1 },
             open: { opacity: 0 },

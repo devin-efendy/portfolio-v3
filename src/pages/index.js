@@ -1,9 +1,7 @@
-import React, {useState, useCallback} from "react"
-// import styled, { createGlobalStyle } from "styled-components"
+import React from "react"
 import { createGlobalStyle } from "styled-components"
 import { motion } from "framer-motion"
 
-// import typography from "../utils/typography"
 import SEO from "../components/seo"
 
 import FramerNavigation from "../components/Navigation/FramerNavigation"
@@ -43,25 +41,11 @@ const Global = createGlobalStyle`
   }
 `
 
-var aboutRef = null;
-
-const setAboutRef = (section, ref) => {
-  switch (section) {
-    case 'about':
-      this.aboutRef = ref;
-      break;
-    default:
-      break;
-  }
-}
-
 const IndexPage = () => {
-  const [state, setState] = useState(null);
-
 
   return (
     <motion.div>
-      <SEO title="Home" />
+      <SEO title="Software Developer" />
 
       <Global />
 

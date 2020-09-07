@@ -96,8 +96,7 @@ const ProjectSection = ({ projectList }) => {
               variants={elementVariants}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              These are things that I have built. I learned a ton through these
-              projects.
+              These are things that I have built. I think the best way to learn is to build something.
             </AboutHeading>
 
             <ShowcaseContainer>{renderProjectList}</ShowcaseContainer>
