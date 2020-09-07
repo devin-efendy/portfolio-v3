@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 import TablerIcon from "../../utils/TablerIcon"
 import Device from "../../utils/Device"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 const MotionLi = styled(motion.li)`
   width: 100%;
@@ -13,7 +14,7 @@ const MotionLi = styled(motion.li)`
   justify-content: flex-start;
 `
 
-const MotionA = styled(motion.a)`
+const MotionA = styled(motion.span)`
   background: none !important;
   text-shadow: none !important;
   background-image: none !important;
@@ -116,33 +117,35 @@ const MenuItem = ({ i, toggle }) => {
   const icons = [
     homeIcon(),
     userIcon(),
-    // toolsIcon(),
-    bracesIcon(),
     laptopIcon(),
+    bracesIcon(),
     phoneIcon(),
   ]
 
   const navText = [
     "Home",
     "About",
-    // "Skills",
-    "Projects",
     "Experience",
+    "Projects",
     "Contact",
   ]
 
   return (
     <MotionLi variants={liVariants} whileTap={{ scale: 0.95 }}>
-      <MotionA
-        // style={{ color: `${colors[i]}` }}
-        initial="rest"
-        whileHover="hover"
-        animate="rest"
-        onClick={toggle}
-      >
-        <span>{icons[i]}</span>
-        <motion.span variants={textVariant}>{navText[i]}</motion.span>
-      </MotionA>
+      <Link to={navText[i].toLowerCase()} spy={true} smooth={true}>
+        <MotionA
+          // style={{ color: `${colors[i]}` }}
+          initial="rest"
+          whileHover="hover"
+          animate="rest"
+          onClick={() => {
+            toggle()
+          }}
+        >
+          <span>{icons[i]}</span>
+          <motion.span variants={textVariant}>{navText[i]}</motion.span>
+        </MotionA>
+      </Link>
     </MotionLi>
   )
 }

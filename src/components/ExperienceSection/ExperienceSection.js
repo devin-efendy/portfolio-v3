@@ -74,6 +74,8 @@ const JobDesc = styled(motion.p)`
   justify-self: start;
 
   padding-top: 0.7rem;
+
+  font-size: 18px;
 `
 
 const TitleContainer = styled(motion.div)`
@@ -84,7 +86,7 @@ const TitleContainer = styled(motion.div)`
 
 const AboutHeading = styled(motion.h1)`
   text-align: left;
-  max-width: 400px;
+  /* max-width: 400px; */
   font-size: 1.5rem;
 
   margin-bottom: 1.5rem;

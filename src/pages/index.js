@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useCallback} from "react"
 // import styled, { createGlobalStyle } from "styled-components"
 import { createGlobalStyle } from "styled-components"
 import { motion } from "framer-motion"
@@ -43,8 +43,22 @@ const Global = createGlobalStyle`
   }
 `
 
+var aboutRef = null;
+
+const setAboutRef = (section, ref) => {
+  switch (section) {
+    case 'about':
+      this.aboutRef = ref;
+      break;
+    default:
+      break;
+  }
+}
+
 const IndexPage = () => {
-  // const [nav, showNav] = useState(false)
+  const [state, setState] = useState(null);
+
+
   return (
     <motion.div>
       <SEO title="Home" />
@@ -56,8 +70,9 @@ const IndexPage = () => {
       <SocialNav />
 
       <HomeSection />
-      <AboutSection />
+      <AboutSection/>
       <ExperienceSection />
+      
       <ProjectSection projectList={useProjectQuery()}/>
     </motion.div>
   )
