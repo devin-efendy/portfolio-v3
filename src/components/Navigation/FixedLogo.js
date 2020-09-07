@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import Device from "../../utils/Device"
+import { Link } from "react-scroll"
 
 const Brand = styled(motion.div)`
   position: fixed;
@@ -44,9 +45,11 @@ const FixedLogo = () => {
   )
 
   return (
-    <Brand>
-      <Img fluid={data.logoDE128.childImageSharp.fluid} />
-    </Brand>
+    <Link to={"home"} spy={true} smooth={true}>
+      <Brand>
+        <Img fluid={data.logoDE128.childImageSharp.fluid} />
+      </Brand>
+    </Link>
   )
 }
 

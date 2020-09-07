@@ -52,7 +52,7 @@ const ProjectDetails = styled(motion.div)`
 `
 
 const ProjectTitle = styled(motion.h1)`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 `
 
@@ -130,7 +130,7 @@ const TechGroup = styled(motion.div)`
 `
 
 const Tech = styled(motion.div)`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
 `
