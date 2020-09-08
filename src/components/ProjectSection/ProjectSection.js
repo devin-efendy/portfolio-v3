@@ -94,7 +94,7 @@ const ProjectSection = ({ projectList }) => {
               variants={elementVariants}
               transition={{ duration: 0.5 }}
             >
-              <motion.h3>projects</motion.h3>
+              <motion.h3>project highlights</motion.h3>
             </TitleContainer>
 
             <AboutHeading
