@@ -56,11 +56,11 @@ Now the application is still up on `localhost` port `8000`
 
 ## **TODO**
 
-1. Refactor `about` and `experience` sections to use GraphQL that queries from markdown files. **(This is a blocker for 2 and 3)**
+1. [ ] Refactor `about` and `experience` sections to use GraphQL that queries from markdown files. **(This is a blocker for 2 and 3)**
 
-2. Make this portfolio available as template for everyone else.
+2. [ ] Make this portfolio available as template for everyone else.
 
-3. Make a tutorial for editing the portfolio easily (using Markdowns).
+3. [ ] Make a tutorial for editing the portfolio easily (using Markdowns).
 
 ## **Other Resources**
 
