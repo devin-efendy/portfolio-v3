@@ -194,8 +194,8 @@ const ExperienceSection = () => {
                   . One of my important resposibility is to maintain Bold's
                   Social Discount plugin which is a plugin that gives customer
                   discount when they share their purchases to Facebook or
-                  Twitter. The technologies that I used are PHP/Laravel,
-                  JavaScript, MySQL, and Docker.
+                  Twitter. The technologies that I used are React, PHP/Laravel,
+                  JavaScript, and Docker.
                 </JobDesc>
               </JobItem>
               <JobItem
