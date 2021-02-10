@@ -53,7 +53,7 @@ const Footer = () => {
             >
               @devin-efendy
             </a>
-            <Scribble>, 2020</Scribble>
+            <Scribble>, 2021</Scribble>
           </FooterText>
         </ResponsiveContainer>
       </SectionResponsiveLayout>

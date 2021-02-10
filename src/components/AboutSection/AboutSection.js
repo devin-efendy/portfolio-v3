@@ -189,7 +189,7 @@ const AboutSection = () => {
                 be very happy to explore other areas too!
                 <br />
                 <br />I enjoy going to Hackathons and programming contests.
-                Earlier this year, I went to Montreal to attend{" "}
+                I also went to Montreal to attend{" "}
                 <a
                   href="http://2020.cusec.net/#/"
                   target="_blank"
