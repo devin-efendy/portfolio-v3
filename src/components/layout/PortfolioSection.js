@@ -24,7 +24,11 @@ const SectionWrapper = styled(motion.section)`
   }
 `
 const PortfolioSection = ({ id, style, children }) => {
-  return <SectionWrapper id={id} style={style} >{children}</SectionWrapper>
+  return (
+    <SectionWrapper id={id} style={style}>
+      {children}
+    </SectionWrapper>
+  )
 }
 
 export default PortfolioSection

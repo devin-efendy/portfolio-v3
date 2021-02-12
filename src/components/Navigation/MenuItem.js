@@ -115,13 +115,7 @@ const MenuItem = ({ i, toggle }) => {
     phoneIcon(),
   ]
 
-  const navText = [
-    "Home",
-    "About",
-    "Experience",
-    "Projects",
-    "Contact",
-  ]
+  const navText = ["Home", "About", "Experience", "Projects", "Contact"]
 
   return (
     <MotionLi variants={liVariants} whileTap={{ scale: 0.95 }}>

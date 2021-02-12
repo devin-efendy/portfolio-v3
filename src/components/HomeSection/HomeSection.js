@@ -60,7 +60,7 @@ const IntroText = styled(motion.p)`
 
 const LineBreak = styled.br`
   display: none;
-/* 
+  /* 
   @media ${Device.min.Tablet} {
     display: inline-block;
   } */

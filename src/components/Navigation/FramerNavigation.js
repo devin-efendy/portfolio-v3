@@ -20,10 +20,11 @@ const FramerNavigation = () => {
           toggleOpen()
         }}
       />
-      <NavigationSidebar toggle={() => {
+      <NavigationSidebar
+        toggle={() => {
           toggleOpen()
-        }}/>
-      
+        }}
+      />
     </Nav>
   )
 }
