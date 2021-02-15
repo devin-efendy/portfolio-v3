@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const useExperienceQuery= () => {
+const useExperienceQuery = () => {
   const queryData = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+      allFile(filter: { relativeDirectory: { eq: "company-logo" } }) {
         edges {
           node {
             name
@@ -16,18 +16,19 @@ const useExperienceQuery= () => {
         }
       }
       allMarkdownRemark(
-        filter: { frontmatter: { type: { eq: "project" } } }
-        sort: { fields: frontmatter___order }
+        filter: { frontmatter: { type: { eq: "experience" } } }
+        sort: { fields: frontmatter___order, order: DESC }
       ) {
         edges {
           node {
             frontmatter {
-              title
+              company_link
+              company_name
+              company_logo
               id
-              name
-              tech
-              demo
-              source
+              position
+              time_start
+              time_end
             }
             excerpt(pruneLength: 500)
             html
@@ -37,7 +38,7 @@ const useExperienceQuery= () => {
     }
   `)
 
-  const projectData = []
+  const experienceData = []
 
   const images = queryData.allFile.edges.map(edge => {
     return edge.node
@@ -47,24 +48,25 @@ const useExperienceQuery= () => {
     return edge.node
   })
 
-  markdowns.forEach(project => {
-    const frontmatter = project.frontmatter
+  markdowns.forEach(item => {
+    const frontmatter = item.frontmatter
 
-    const findProject = images.find(e => e.name === frontmatter.id)
+    const findExperience = images.find(e => e.name === frontmatter.company_logo)
 
-    projectData.push({
-      key: frontmatter.id,
-      title: frontmatter.title,
-      tech: frontmatter.tech,
-      demo: frontmatter.demo,
-      source: frontmatter.source,
-      description: project.excerpt,
-      imageSharp: findProject.childImageSharp.fluid,
-      html: project.html
+    experienceData.push({
+      companyName: frontmatter.company_name,
+      companyLink: frontmatter.company_link,
+      companyLogo: frontmatter.company_logo,
+      position: frontmatter.position,
+      timeStart: frontmatter.time_start,
+      timeEnd: frontmatter.time_end,
+      description: item.excerpt,
+      imageSharp: findExperience.childImageSharp.fluid,
+      html: item.html,
     })
   })
 
-  return projectData
+  return experienceData
 }
 
 export default useExperienceQuery
