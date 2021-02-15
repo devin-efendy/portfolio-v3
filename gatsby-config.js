@@ -57,11 +57,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Reenie Beanie\:400`,
-        ],
+        fonts: [`Reenie Beanie\:400`],
         // display: 'swap'
-      }
-    }
+      },
+    },
   ],
 }

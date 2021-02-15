@@ -54,6 +54,7 @@ const useExperienceQuery = () => {
     const findExperience = images.find(e => e.name === frontmatter.company_logo)
 
     experienceData.push({
+      key: frontmatter.id,
       companyName: frontmatter.company_name,
       companyLink: frontmatter.company_link,
       companyLogo: frontmatter.company_logo,

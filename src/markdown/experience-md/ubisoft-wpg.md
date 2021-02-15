@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 id: "ubisoft-wpg"
 type: "experience"
 company_name: "Ubisoft Winnipeg"
@@ -10,4 +10,4 @@ time_start: "January 2021"
 time_end: "Present"
 ---
 
-Ubisoft Winnipeg
+Working with technologies such as C#, .NET, and PostgreSQL. Also, learning about DDD & CQRS patterns.

@@ -10,4 +10,4 @@ time_start: "September 2019"
 time_end: "December 2020"
 ---
 
-University of Manitoba
+I conducted lab sessions and guided students to understand lab materials and to solve lab assignments while ensuring best programming practices. Additionaly, I helped student with C and UNIX.

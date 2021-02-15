@@ -11,6 +11,7 @@ import Device from "../../utils/Device"
 // import Scribble from "../Text/Scribble"
 import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
 import PortfolioSection from "../layout/PortfolioSection"
+import Experience from "./Experience"
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -108,30 +109,7 @@ const AboutHeading = styled(motion.h1)`
   }
 `
 
-const ExperienceSection = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        boldLogo: file(relativePath: { eq: "logo/bold-logo.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 700, maxHeight: 700) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        umLogo: file(relativePath: { eq: "logo/um-logo.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 700, maxHeight: 700) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const boldLogo = [data.boldLogo.childImageSharp.fluid]
-  const umLogo = [data.umLogo.childImageSharp.fluid]
+const ExperienceSection = ({ experienceList }) => {
 
   const controls = useAnimation()
   const [ref, inView] = useInView({ threshold: 0.2 })
@@ -146,6 +124,19 @@ const ExperienceSection = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 50 },
   }
+
+  var transDelay = 0.5
+
+  const renderExperienceList = experienceList.map(item => {
+    return (
+      <Experience
+        transDelay={(transDelay += 0.25)}
+        key={item.key}
+        experienceObject={item}
+      />
+    )
+  })
+
 
   return (
     <PortfolioSection id="experience">
@@ -173,62 +164,7 @@ const ExperienceSection = () => {
             </AboutHeading>
 
             <JobGridContainer>
-              <JobItem
-                variants={elementVariants}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <JobCompanyLogo fluid={boldLogo} />
-                <JobTitle>
-                  Software Developer Co-op at{" "}
-                  <a
-                    href="https://boldcommerce.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Bold Commerce
-                  </a>
-                </JobTitle>
-                <JobDuration>May 2020 - August 2020</JobDuration>
-                <JobDesc>
-                  At Bold, I was working in Checkout Plugin & API team. The team
-                  develops plugin features and API endpoints for{" "}
-                  <a
-                    href="https://boldcommerce.com/checkout"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Bold Checkout
-                  </a>
-                  . One of my important resposibility is to maintain Bold's
-                  Social Discount plugin which is a plugin that gives customer
-                  discount when they share their purchases to Facebook or
-                  Twitter. The technologies that I used are React, PHP/Laravel,
-                  JavaScript, and Docker.
-                </JobDesc>
-              </JobItem>
-              <JobItem
-                variants={elementVariants}
-                transition={{ duration: 0.5, delay: 0.75 }}
-              >
-                <JobCompanyLogo fluid={umLogo} />
-                <JobTitle>
-                  Teaching Assistant at{" "}
-                  <a
-                    href="https://www.sci.umanitoba.ca/cs/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    University of Manitoba
-                  </a>
-                </JobTitle>
-                <JobDuration>September 2019 - December 2019</JobDuration>
-                <JobDesc>
-                  I conducted lab sessions and guided students to understand lab
-                  materials and to solve lab assignments while ensuring best
-                  programming practices. Additionaly, I helped student with C
-                  and UNIX.
-                </JobDesc>
-              </JobItem>
+              {renderExperienceList}
             </JobGridContainer>
           </ResponsiveContainer>
         </SectionResponsiveLayout>
