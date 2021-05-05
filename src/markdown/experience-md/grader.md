@@ -6,8 +6,7 @@ company_name: "University of Manitoba"
 company_link: "https://sci.umanitoba.ca/cs/"
 company_logo: "um-logo"
 position: "Grader/Marker"
-time_start: "September 2019"
-time_end: "Present"
+dates: "September 2020 - April 2021"
 ---
 
-I grades assignments for COMP1020: Introductory to Computer Science 2. I automates the process for testing assignments by creating shell scripts that greatly reduce my marking time. 
+I graded assignments for two courses: Introductory to Computer Science 2 and Operating Systems. To cut down marking time, I created a shell scripts to automate the major and repetitive steps in the marking process.

@@ -9,7 +9,7 @@ demo: "https://master.dlhgbmxjdlq5l.amplifyapp.com/"
 source: "https://github.com/devin-efendy/portfolio-v3"
 ---
 
-This is my third iteration of my online portfolio. Built with GatsbyJS and GraphQL.
+This is my third iteration of my online portfolio, built with GatsbyJS and GraphQL.
 In my opinion, this iteration is a significant improvement from the previous two.
 I also tried to dockerize the local development environment and use <a href="https://aws.amazon.com/amplify/" target="_blank" >AWS Amplify</a>
 for deployment to integrate Continuous Deployment to the workflow of this project.

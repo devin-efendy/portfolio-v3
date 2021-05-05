@@ -6,8 +6,7 @@ company_name: "University of Manitoba"
 company_link: "https://sci.umanitoba.ca/cs/"
 company_logo: "um-logo"
 position: "Teaching Assistant"
-time_start: "September 2019"
-time_end: "December 2020"
+dates: "Fall 2019, Fall 2020"
 ---
 
-I conducted lab sessions and guided students to understand lab materials and to solve lab assignments while ensuring best programming practices. Additionaly, I helped student with C and UNIX.
+Teaching is really rewarding! I was a TA for Programming Practices course. I conducted lab sessions and assisted students to understand lab materials: C, UNIX, and programming best practices.

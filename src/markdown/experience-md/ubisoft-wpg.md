@@ -6,8 +6,7 @@ company_name: "Ubisoft Winnipeg"
 company_link: "https://winnipeg.ubisoft.com"
 company_logo: "ubisoft-wpg-logo"
 position: "Junior Programmer"
-time_start: "January 2021"
-time_end: "Present"
+dates: "January 2021 - April 2021"
 ---
 
-Working with technologies such as C#, .NET, and PostgreSQL. Also, learning about DDD & CQRS patterns.
+At Ubisoft, I worked with C#, .NET, .NET Core, Postgre SQL, and WPF applications. I was primarily developing new features and resolving bug issues. It was very exciting to get some exposure to game development! I had opportunities to work with Unreal Engine and Unity as well. Also, ensuring that students are following programming best practices.

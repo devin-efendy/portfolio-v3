@@ -52,6 +52,18 @@ const JobDesc = styled(motion.p)`
   padding-top: 0.7rem;
 
   font-size: 18px;
+
+  p {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  a {
+    color: #abdcff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `
 
 const elementVariants = {
@@ -65,8 +77,7 @@ const Experience = ({ experienceObject, transDelay }) => {
     companyLink,
     companyLogo,
     position,
-    timeStart,
-    timeEnd,
+    dates,
     description,
     imageSharp,
     html,
@@ -75,20 +86,16 @@ const Experience = ({ experienceObject, transDelay }) => {
   return (
     <JobItem
       variants={elementVariants}
-      transition={{ duration: 0.5, delay: transDelay}}
+      transition={{ duration: 0.5, delay: transDelay }}
     >
       <JobCompanyLogo fluid={imageSharp} />
       <JobTitle>
         {position} at{" "}
-        <a
-          href={companyLink}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={companyLink} target="_blank" rel="noreferrer">
           {companyName}
         </a>
       </JobTitle>
-      <JobDuration>{timeStart} - {timeEnd}</JobDuration>
+      <JobDuration>{dates}</JobDuration>
       <JobDesc dangerouslySetInnerHTML={{ __html: html }} />
     </JobItem>
   )

@@ -27,8 +27,7 @@ const useExperienceQuery = () => {
               company_logo
               id
               position
-              time_start
-              time_end
+              dates
             }
             excerpt(pruneLength: 500)
             html
@@ -59,8 +58,7 @@ const useExperienceQuery = () => {
       companyLink: frontmatter.company_link,
       companyLogo: frontmatter.company_logo,
       position: frontmatter.position,
-      timeStart: frontmatter.time_start,
-      timeEnd: frontmatter.time_end,
+      dates: frontmatter.dates,
       description: item.excerpt,
       imageSharp: findExperience.childImageSharp.fluid,
       html: item.html,
