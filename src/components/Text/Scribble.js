@@ -5,7 +5,7 @@ import Device from "../../utils/Device"
 
 const Text = styled(motion.span)`
   display: inline-block !important;
-  
+
   font-family: "Reenie Beanie", cursive !important;
   color: gray !important;
 

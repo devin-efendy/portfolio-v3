@@ -184,12 +184,13 @@ const AboutSection = () => {
                 >
                   University of Manitoba
                 </a>
-                . I have always been intrigued by technology and Computer Science. Especially, in
-                area such as Software Engineering and Web Development. I would
-                be very happy to explore other areas too!
+                . I have always been intrigued by technology and Computer
+                Science. Especially, in area such as Software Engineering and
+                Web Development. I would be very happy to explore other areas
+                too!
                 <br />
-                <br />I enjoy going to Hackathons and programming contests.
-                I also went to Montreal to attend{" "}
+                <br />I enjoy going to Hackathons and programming contests. I
+                also went to Montreal to attend{" "}
                 <a
                   href="http://2020.cusec.net/#/"
                   target="_blank"

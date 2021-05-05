@@ -14,6 +14,7 @@ import ExperienceSection from "../components/ExperienceSection/ExperienceSection
 import ProjectSection from "../components/ProjectSection/ProjectSection"
 
 import useProjectQuery from "../graphql/ProjectQuery"
+import useExperienceQuery from "../graphql/ExperienceQuery"
 import ContactSection from "../components/ContactSection/ContactSection"
 import Footer from "../components/Footer"
 
@@ -56,7 +57,7 @@ const IndexPage = () => {
 
       <HomeSection />
       <AboutSection />
-      <ExperienceSection />
+      <ExperienceSection experienceList={useExperienceQuery()} />
 
       <ProjectSection projectList={useProjectQuery()} />
 

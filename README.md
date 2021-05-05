@@ -15,7 +15,7 @@ For the deployment, I use [AWS Amplify](https://aws.amazon.com/amplify/) because
 
 ## **How to run locally**
 
-**Pre-requisite:** make sure that you have `npm` or `yarn` and  `Gatsby CLI` installed
+**Pre-requisite:** make sure that you have `npm` or `yarn` and `Gatsby CLI` installed
 
 [Install NPM](https://nodejs.org/en/)
 
@@ -39,11 +39,13 @@ yarn install
 ```
 
 When you finished installing all the dependencies, you can start running the application.
+
 ```shell
 gatsby develop
 ```
 
 ### **--- OR ---**
+
 run it using `Docker`
 
 **Pre-requisite:** make sure that you have `Docker` installed

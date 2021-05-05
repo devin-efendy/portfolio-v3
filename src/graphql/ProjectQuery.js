@@ -60,7 +60,7 @@ const useProjectQuery = () => {
       source: frontmatter.source,
       description: project.excerpt,
       imageSharp: findProject.childImageSharp.fluid,
-      html: project.html
+      html: project.html,
     })
   })
 

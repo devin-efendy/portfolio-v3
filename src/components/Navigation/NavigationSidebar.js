@@ -64,9 +64,9 @@ const NavigationSidebar = ({ toggle }) => {
 
   return (
     <Sidebar variants={variants}>
-      <motion.div style={{zIndex: 10}}>
+      <motion.div style={{ zIndex: 10 }}>
         {itemIds.map(i => (
-          <MenuItem i={i} key={i} toggle={toggle}/>
+          <MenuItem i={i} key={i} toggle={toggle} />
         ))}
       </motion.div>
     </Sidebar>

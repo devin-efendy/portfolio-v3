@@ -1,19 +1,14 @@
 import React from "react"
 
-const SectionWrapper = ({children, customStyle}) => {
-
+const SectionWrapper = ({ children, customStyle }) => {
   const defaultStyle = {
     backgroundColor: "white",
-    height: "100%"
+    height: "100%",
   }
 
-  const divStyle = customStyle ? customStyle : defaultStyle;
+  const divStyle = customStyle ? customStyle : defaultStyle
 
-  return (
-    <div style={divStyle}>
-        {children}
-    </div>
-  )
+  return <div style={divStyle}>{children}</div>
 }
 
 export default SectionWrapper

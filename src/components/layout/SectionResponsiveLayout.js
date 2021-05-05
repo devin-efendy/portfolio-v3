@@ -37,4 +37,4 @@ const SectionResponsiveLayout = ({ children }) => {
   return <SectRespLayout>{children}</SectRespLayout>
 }
 
-export default SectionResponsiveLayout;
+export default SectionResponsiveLayout

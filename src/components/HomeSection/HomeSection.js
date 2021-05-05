@@ -60,7 +60,7 @@ const IntroText = styled(motion.p)`
 
 const LineBreak = styled.br`
   display: none;
-/* 
+  /* 
   @media ${Device.min.Tablet} {
     display: inline-block;
   } */
@@ -121,8 +121,9 @@ const HomeSection = () => {
         </motion.div>
 
         <IntroText>
-          I like to play around and tinker with tech <LineBreak />
-          and build things with it.
+          I like to play around and tinker with tech 
+          {/* <LineBreak />
+          and build things with it. */}
         </IntroText>
 
         <CustomLink to={"about"} spy={true} smooth={true}>
