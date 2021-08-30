@@ -1,14 +1,14 @@
 const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "748px",
-  laptop: "1000px",
-  laptopM: "1346px",
-  laptopL: "1420px",
-  laptopXL: "1580px",
-  fhd: "1900px",
-  desktop: "2540px",
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '748px',
+  laptop: '1000px',
+  laptopM: '1346px',
+  laptopL: '1420px',
+  laptopXL: '1580px',
+  fhd: '1900px',
+  desktop: '2540px',
 }
 
 const Device = {

@@ -1,8 +1,8 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import Device from "../../utils/Device"
-import MenuItem from "./MenuItem"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import Device from '../../utils/Device'
+import MenuItem from './MenuItem'
 
 // const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
 
@@ -41,7 +41,7 @@ const Sidebar = styled(motion.ul)`
 
 const variants = {
   open: {
-    x: "0",
+    x: '0',
     transition: {
       staggerChildren: 0.07,
       delayChildren: 0.2,
@@ -49,7 +49,7 @@ const variants = {
     },
   },
   closed: {
-    x: "-100%",
+    x: '-100%',
     transition: {
       delay: 0.5,
       staggerChildren: 0.05,

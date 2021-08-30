@@ -1,12 +1,12 @@
 ---
 order: 1
-id: "portfolio-v3"
-type: "project"
-title: "Online Portfolio, 3rd Iteration"
-name: "Portfolio, 3rd Iteration"
-tech: ["react", "docker", "aws"]
-demo: "https://master.dlhgbmxjdlq5l.amplifyapp.com/"
-source: "https://github.com/devin-efendy/portfolio-v3"
+id: 'portfolio-v3'
+type: 'project'
+title: 'Online Portfolio, 3rd Iteration'
+name: 'Portfolio, 3rd Iteration'
+tech: ['react', 'docker', 'aws']
+demo: 'https://master.dlhgbmxjdlq5l.amplifyapp.com/'
+source: 'https://github.com/devin-efendy/portfolio-v3'
 ---
 
 This is my third iteration of my online portfolio, built with GatsbyJS and GraphQL.

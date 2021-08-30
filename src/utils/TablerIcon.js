@@ -1,10 +1,10 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React from 'react'
+import { motion } from 'framer-motion'
 
-const strokeColor = "rgba(255,255,255,0.75)"
-const strokeWidth = "1"
-const height = "40px"
-const width = "40px"
+const strokeColor = 'rgba(255,255,255,0.75)'
+const strokeWidth = '1'
+const height = '40px'
+const width = '40px'
 
 const HomeIcon = ({ variants }) => {
   return (

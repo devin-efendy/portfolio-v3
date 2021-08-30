@@ -1,12 +1,12 @@
 ---
 order: 2
-id: "winnipeg-bus"
-type: "project"
-title: "Winnipeg Bus"
-name: "Winnipeg Bus"
-tech: ["js", "react"]
-demo: "https://chrome.google.com/webstore/detail/winnipeg-bus/cbgjpmfdjnogcgkpjcpnihmocbhpbgpo?hl=en"
-source: "https://github.com/devin-efendy/winnipeg-bus-chrome-ext"
+id: 'winnipeg-bus'
+type: 'project'
+title: 'Winnipeg Bus'
+name: 'Winnipeg Bus'
+tech: ['js', 'react']
+demo: 'https://chrome.google.com/webstore/detail/winnipeg-bus/cbgjpmfdjnogcgkpjcpnihmocbhpbgpo?hl=en'
+source: 'https://github.com/devin-efendy/winnipeg-bus-chrome-ext'
 ---
 
 A Chrome Extension that displays nearby bus stops and schedules across Winnipeg.

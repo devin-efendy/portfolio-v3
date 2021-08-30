@@ -1,9 +1,9 @@
-import React from "react"
-import Img from "gatsby-image"
-import { motion } from "framer-motion"
+import React from 'react'
+import Img from 'gatsby-image'
+import { motion } from 'framer-motion'
 
-import styled from "styled-components"
-import Device from "../../utils/Device"
+import styled from 'styled-components'
+import Device from '../../utils/Device'
 
 const JobItem = styled(motion.div)`
   display: inline-grid;
@@ -90,7 +90,7 @@ const Experience = ({ experienceObject, transDelay }) => {
     >
       <JobCompanyLogo fluid={imageSharp} />
       <JobTitle>
-        {position} at{" "}
+        {position} at{' '}
         <a href={companyLink} target="_blank" rel="noreferrer">
           {companyName}
         </a>

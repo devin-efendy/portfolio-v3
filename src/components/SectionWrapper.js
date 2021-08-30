@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
 const SectionWrapper = ({ children, customStyle }) => {
   const defaultStyle = {
-    backgroundColor: "white",
-    height: "100%",
+    backgroundColor: 'white',
+    height: '100%',
   }
 
   const divStyle = customStyle ? customStyle : defaultStyle
