@@ -1,12 +1,12 @@
 ---
 order: 3
-id: "grocery-assistant"
-type: "project"
-title: "Grocery Assistant"
-name: "Grocery Assistant"
-tech: ["java", "android", "html", "css", "js", "bootstrap"]
-demo: "https://comp3350-group15.github.io/grocery-cool-project-15/"
-source: "https://github.com/comp3350-group15/grocery-cool-project-15"
+id: 'grocery-assistant'
+type: 'project'
+title: 'Grocery Assistant'
+name: 'Grocery Assistant'
+tech: ['java', 'android', 'html', 'css', 'js', 'bootstrap']
+demo: 'https://comp3350-group15.github.io/grocery-cool-project-15/'
+source: 'https://github.com/comp3350-group15/grocery-cool-project-15'
 ---
 
 Grocery Assitant is an Android application that I and my team built during Software Engineering course.

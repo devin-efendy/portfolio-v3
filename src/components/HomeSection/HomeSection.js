@@ -1,10 +1,10 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import Device from "../../utils/Device"
-import Scribble from "../Text/Scribble"
-import PortfolioSection from "../layout/PortfolioSection"
-import { Link } from "react-scroll"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import Device from '../../utils/Device'
+import Scribble from '../Text/Scribble'
+import PortfolioSection from '../layout/PortfolioSection'
+import { Link } from 'react-scroll'
 
 const Container = styled(motion.div)`
   display: flex;
@@ -99,17 +99,17 @@ const CustomLink = styled(motion.custom(Link))``
 
 const HomeSection = () => {
   return (
-    <PortfolioSection id="home" style={{ height: "100vh" }}>
+    <PortfolioSection id="home" style={{ height: '100vh' }}>
       <Container
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.75, duration: 1, ease: "easeOut" }}
+        transition={{ delay: 0.75, duration: 1, ease: 'easeOut' }}
       >
         <motion.div>
           <Scribble
             style={{
-              marginBottom: "1rem",
-              textAlign: "left",
-              marginTop: "0.5rem 0",
+              marginBottom: '1rem',
+              textAlign: 'left',
+              marginTop: '0.5rem 0',
             }}
           >
             Oh look! Someone is here
@@ -121,12 +121,12 @@ const HomeSection = () => {
         </motion.div>
 
         <IntroText>
-          I like to play around and tinker with tech 
+          I like to play around and tinker with tech
           {/* <LineBreak />
           and build things with it. */}
         </IntroText>
 
-        <CustomLink to={"about"} spy={true} smooth={true}>
+        <CustomLink to={'about'} spy={true} smooth={true}>
           <ExploreButton
             whileHover={{ scale: 1.025 }}
             whileTap={{ scale: 0.975 }}
@@ -135,7 +135,7 @@ const HomeSection = () => {
           </ExploreButton>
         </CustomLink>
 
-        <Scribble style={{ marginTop: "1rem" }}>
+        <Scribble style={{ marginTop: '1rem' }}>
           let's explore together!
         </Scribble>
       </Container>

@@ -1,9 +1,9 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import TablerIcon from "../../utils/TablerIcon"
-import Device from "../../utils/Device"
-import { Link } from "react-scroll"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import TablerIcon from '../../utils/TablerIcon'
+import Device from '../../utils/Device'
+import { Link } from 'react-scroll'
 
 const MotionLi = styled(motion.li)`
   width: 100%;
@@ -72,34 +72,34 @@ const liVariants = {
 
 const svgVariant = {
   rest: {
-    stroke: "rgba(255,255,255,0.65)",
+    stroke: 'rgba(255,255,255,0.65)',
     transition: {
       duration: 0.1,
-      type: "tween",
+      type: 'tween',
     },
   },
   hover: {
-    stroke: "rgba(255,255,255,1)",
+    stroke: 'rgba(255,255,255,1)',
     transition: {
       duration: 0.1,
-      type: "tween",
+      type: 'tween',
     },
   },
 }
 
 const textVariant = {
   rest: {
-    color: "rgba(255,255,255,0.65)",
+    color: 'rgba(255,255,255,0.65)',
     transition: {
       duration: 0.1,
-      type: "tween",
+      type: 'tween',
     },
   },
   hover: {
-    color: "rgba(255,255,255,1)",
+    color: 'rgba(255,255,255,1)',
     transition: {
       duration: 0.1,
-      type: "tween",
+      type: 'tween',
     },
   },
 }
@@ -115,7 +115,7 @@ const MenuItem = ({ i, toggle }) => {
     phoneIcon(),
   ]
 
-  const navText = ["Home", "About", "Experience", "Projects", "Contact"]
+  const navText = ['Home', 'About', 'Experience', 'Projects', 'Contact']
 
   return (
     <MotionLi variants={liVariants} whileTap={{ scale: 0.95 }}>

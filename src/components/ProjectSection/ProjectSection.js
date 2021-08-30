@@ -1,15 +1,15 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from 'react'
 
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Device from "../../utils/Device"
-import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
-import PortfolioSection from "../layout/PortfolioSection"
-import Project from "./Project"
-import Scribble from "../Text/Scribble"
+import Device from '../../utils/Device'
+import SectionResponsiveLayout from '../layout/SectionResponsiveLayout'
+import PortfolioSection from '../layout/PortfolioSection'
+import Project from './Project'
+import Scribble from '../Text/Scribble'
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -59,7 +59,7 @@ const ProjectSection = ({ projectList }) => {
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible")
+      controls.start('visible')
     }
   }, [controls, inView])
 
@@ -86,7 +86,7 @@ const ProjectSection = ({ projectList }) => {
         ref={ref}
         animate={controls}
         initial="hidden"
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
       >
         <SectionResponsiveLayout>
           <ResponsiveContainer>

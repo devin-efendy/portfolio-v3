@@ -1,7 +1,7 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import Device from "../../utils/Device"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import Device from '../../utils/Device'
 
 const ToggleButton = styled(motion.button)`
   position: fixed;
@@ -61,8 +61,8 @@ const MenuToggle = ({ toggle }) => {
       <Svg>
         <Path
           variants={{
-            closed: { d: "M 7.5 12.5 42.5 12.5", stroke: "white" },
-            open: { d: "M 10 40 L 40 10", stroke: "white" },
+            closed: { d: 'M 7.5 12.5 42.5 12.5', stroke: 'white' },
+            open: { d: 'M 10 40 L 40 10', stroke: 'white' },
           }}
           transition={{}}
         />
@@ -76,8 +76,8 @@ const MenuToggle = ({ toggle }) => {
         />
         <Path
           variants={{
-            closed: { d: "M 7.5 37.5 42.5 37.5", stroke: "white" },
-            open: { d: "M 10 10 L 40 40  ", stroke: "white" },
+            closed: { d: 'M 7.5 37.5 42.5 37.5', stroke: 'white' },
+            open: { d: 'M 10 10 L 40 40  ', stroke: 'white' },
           }}
         />
       </Svg>

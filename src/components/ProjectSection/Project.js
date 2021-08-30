@@ -1,8 +1,8 @@
-import React from "react"
-import Img from "gatsby-image"
-import { motion } from "framer-motion"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faDesktop } from "@fortawesome/free-solid-svg-icons"
+import React from 'react'
+import Img from 'gatsby-image'
+import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faReact,
@@ -14,12 +14,12 @@ import {
   faHtml5,
   faCss3,
   faBootstrap,
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons'
 
-import ReactTooltip from "react-tooltip"
+import ReactTooltip from 'react-tooltip'
 
-import styled from "styled-components"
-import Device from "../../utils/Device"
+import styled from 'styled-components'
+import Device from '../../utils/Device'
 
 const ProjectContainer = styled(motion.div)`
   display: flex;
@@ -145,7 +145,7 @@ const Project = ({ projectObject, transDelay }) => {
 
   const techList = tech.map(i => {
     return (
-      <Tech key={i} whileHover={{ color: "rgba(255,255,255,1)" }}>
+      <Tech key={i} whileHover={{ color: 'rgba(255,255,255,1)' }}>
         {getTechIcon(i)}
       </Tech>
     )
@@ -194,43 +194,43 @@ const Project = ({ projectObject, transDelay }) => {
 
 const getTechIcon = str => {
   var selectedIcon = null
-  var selectedString = ""
+  var selectedString = ''
   switch (str) {
-    case "js":
+    case 'js':
       selectedIcon = faJs
-      selectedString = "JavaScript"
+      selectedString = 'JavaScript'
       break
-    case "html":
+    case 'html':
       selectedIcon = faHtml5
-      selectedString = "HTML"
+      selectedString = 'HTML'
       break
-    case "css":
+    case 'css':
       selectedIcon = faCss3
-      selectedString = "CSS"
+      selectedString = 'CSS'
       break
-    case "bootstrap":
+    case 'bootstrap':
       selectedIcon = faBootstrap
-      selectedString = "Bootstrap"
+      selectedString = 'Bootstrap'
       break
-    case "react":
+    case 'react':
       selectedIcon = faReact
-      selectedString = "React"
+      selectedString = 'React'
       break
-    case "aws":
+    case 'aws':
       selectedIcon = faAws
-      selectedString = "AWS Amplify"
+      selectedString = 'AWS Amplify'
       break
-    case "docker":
+    case 'docker':
       selectedIcon = faDocker
-      selectedString = "Docker"
+      selectedString = 'Docker'
       break
-    case "android":
+    case 'android':
       selectedIcon = faAndroid
-      selectedString = "Android"
+      selectedString = 'Android'
       break
-    case "java":
+    case 'java':
       selectedIcon = faJava
-      selectedString = "Java"
+      selectedString = 'Java'
       break
     default:
       return str

@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Device from "../../utils/Device"
+import Device from '../../utils/Device'
 
 const SectionWrapper = styled(motion.section)`
   background: #1f1f1f;

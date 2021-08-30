@@ -1,16 +1,16 @@
-import React, { useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React, { useEffect } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Device from "../../utils/Device"
-import Scribble from "../Text/Scribble"
-import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
-import PortfolioSection from "../layout/PortfolioSection"
+import Device from '../../utils/Device'
+import Scribble from '../Text/Scribble'
+import SectionResponsiveLayout from '../layout/SectionResponsiveLayout'
+import PortfolioSection from '../layout/PortfolioSection'
 
 const ResponsiveContainer = styled(motion.div)`
   display: inline-grid;
@@ -128,7 +128,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible")
+      controls.start('visible')
     }
   }, [controls, inView])
 
@@ -143,7 +143,7 @@ const AboutSection = () => {
         ref={ref}
         animate={controls}
         initial="hidden"
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
       >
         <SectionResponsiveLayout>
           <ResponsiveContainer>
@@ -164,19 +164,19 @@ const AboutSection = () => {
                 Driven, passionate, and dedicated software developer
               </AboutHeading>
 
-              <Scribble style={{ width: "100%", textAlign: "right" }}>
+              <Scribble style={{ width: '100%', textAlign: 'right' }}>
                 A little bit about myself
               </Scribble>
               <AboutParagraph>
-                I'm a fourth year Computer Science Honours{" "}
+                I'm a fourth year Computer Science Honours{' '}
                 <a
                   href="http://coop.cs.umanitoba.ca/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   (Co-op)
-                </a>{" "}
-                student at the{" "}
+                </a>{' '}
+                student at the{' '}
                 <a
                   href="https://www.sci.umanitoba.ca/cs/"
                   target="_blank"
@@ -190,7 +190,7 @@ const AboutSection = () => {
                 too!
                 <br />
                 <br />I enjoy going to Hackathons and programming contests. I
-                also went to Montreal to attend{" "}
+                also went to Montreal to attend{' '}
                 <a
                   href="http://2020.cusec.net/#/"
                   target="_blank"

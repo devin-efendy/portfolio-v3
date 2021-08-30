@@ -1,8 +1,8 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
 
-import Device from "../../utils/Device"
+import Device from '../../utils/Device'
 
 const SectRespLayout = styled(motion.div)`
   width: 100%;

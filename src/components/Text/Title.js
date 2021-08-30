@@ -1,7 +1,7 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import Device from "../../utils/Device"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import Device from '../../utils/Device'
 
 const StyledHeader = styled(motion.h1)`
   color: white;

@@ -1,17 +1,17 @@
-import React, { useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React, { useEffect } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Device from "../../utils/Device"
+import Device from '../../utils/Device'
 // import Scribble from "../Text/Scribble"
-import SectionResponsiveLayout from "../layout/SectionResponsiveLayout"
-import PortfolioSection from "../layout/PortfolioSection"
-import Experience from "./Experience"
+import SectionResponsiveLayout from '../layout/SectionResponsiveLayout'
+import PortfolioSection from '../layout/PortfolioSection'
+import Experience from './Experience'
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -61,13 +61,12 @@ const AboutHeading = styled(motion.h1)`
 `
 
 const ExperienceSection = ({ experienceList }) => {
-
   const controls = useAnimation()
   const [ref, inView] = useInView({ threshold: 0.2 })
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible")
+      controls.start('visible')
     }
   }, [controls, inView])
 
@@ -88,14 +87,13 @@ const ExperienceSection = ({ experienceList }) => {
     )
   })
 
-
   return (
     <PortfolioSection id="experience">
       <motion.div
         ref={ref}
         animate={controls}
         initial="hidden"
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
       >
         <SectionResponsiveLayout>
           <ResponsiveContainer>
@@ -114,9 +112,7 @@ const ExperienceSection = ({ experienceList }) => {
               the industry experts.
             </AboutHeading>
 
-            <JobGridContainer>
-              {renderExperienceList}
-            </JobGridContainer>
+            <JobGridContainer>{renderExperienceList}</JobGridContainer>
           </ResponsiveContainer>
         </SectionResponsiveLayout>
       </motion.div>

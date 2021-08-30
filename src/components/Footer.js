@@ -1,12 +1,12 @@
-import React from "react"
+import React from 'react'
 
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Scribble from "./Text/Scribble"
-import SectionResponsiveLayout from "./layout/SectionResponsiveLayout"
-import PortfolioSection from "./layout/PortfolioSection"
+import Scribble from './Text/Scribble'
+import SectionResponsiveLayout from './layout/SectionResponsiveLayout'
+import PortfolioSection from './layout/PortfolioSection'
 
 const ResponsiveContainer = styled(motion.div)`
   display: flex;
@@ -39,13 +39,13 @@ const Footer = () => {
   return (
     <PortfolioSection
       id="footer"
-      style={{ paddingTop: "4rem", paddingBottom: "0rem" }}
+      style={{ paddingTop: '4rem', paddingBottom: '0rem' }}
     >
       <SectionResponsiveLayout>
         <ResponsiveContainer>
           <FooterText>
-            {" "}
-            <Scribble>This website is created by</Scribble>{" "}
+            {' '}
+            <Scribble>This website is created by</Scribble>{' '}
             <a
               href="https://github.com/devin-efendy"
               target="_blank"

@@ -1,10 +1,10 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import styled from "styled-components"
-import Device from "../../utils/Device"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
-import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
+import * as React from 'react'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import Device from '../../utils/Device'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const SocialContainer = styled(motion.div)`
   display: none;
@@ -53,14 +53,14 @@ const LinkVariants = {
     opacity: 0,
     transition: {
       duration: 1,
-      type: "tween",
+      type: 'tween',
     },
   },
   start: {
     opacity: 1,
     transition: {
       duration: 1,
-      type: "tween",
+      type: 'tween',
     },
   },
 }
@@ -87,7 +87,7 @@ const SocialNav = () => {
         <SocialLink
           href="https://www.linkedin.com/in/devinefendy/"
           target="_blank"
-          whileHover={{ color: "#abdcff" }}
+          whileHover={{ color: '#abdcff' }}
           variants={LinkVariants}
           rel="noreferrer"
         >
@@ -97,7 +97,7 @@ const SocialNav = () => {
         <SocialLink
           href="https://github.com/devin-efendy"
           target="_blank"
-          whileHover={{ color: "#abdcff" }}
+          whileHover={{ color: '#abdcff' }}
           variants={LinkVariants}
           rel="noreferrer"
         >
@@ -107,7 +107,7 @@ const SocialNav = () => {
         <SocialLink
           href="mailto:efendyd@myumanitoba.ca"
           target="_blank"
-          whileHover={{ color: "#abdcff" }}
+          whileHover={{ color: '#abdcff' }}
           variants={LinkVariants}
           rel="noreferrer"
         >
