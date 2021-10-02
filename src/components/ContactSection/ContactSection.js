@@ -109,8 +109,7 @@ const ContactSection = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <ContactParagraph>
-                I'm currently looking for internship/co-op opportunities for{' '}
-                <b>Fall 2021</b>. If you are interested or have any questions,
+                If you are interested or have any questions,
                 feel free to reach me at my{' '}
                 <a
                   href="mailto:efendyd@myumanitoba.ca"

@@ -15,7 +15,9 @@ const JobItem = styled(motion.div)`
 
   margin: 1.5rem 0;
 
-  grid-template-columns: 100px auto;
+  padding: 0 1.5rem;
+
+  grid-template-columns: auto;
   grid-template-rows: auto auto auto;
 `
 
@@ -27,7 +29,7 @@ const JobCompanyLogo = styled(motion.custom(Img))`
 `
 
 const JobTitle = styled(motion.h3)`
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1;
 
   font-size: 1rem;
@@ -36,14 +38,14 @@ const JobTitle = styled(motion.h3)`
 `
 
 const JobDuration = styled(motion.p)`
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
 
   justify-self: start;
 `
 
 const JobDesc = styled(motion.div)`
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 3;
   justify-self: start;
 
@@ -88,12 +90,12 @@ const Experience = ({ experienceObject, transDelay }) => {
       variants={elementVariants}
       transition={{ duration: 0.5, delay: transDelay }}
     >
-      <JobCompanyLogo fluid={imageSharp} />
       <JobTitle>
-        {position} at{' '}
         <a href={companyLink} target="_blank" rel="noreferrer">
           {companyName}
         </a>
+        {', '}
+        {position}
       </JobTitle>
       <JobDuration>{dates}</JobDuration>
       <JobDesc dangerouslySetInnerHTML={{ __html: html }} />
