@@ -21,7 +21,7 @@ const JobItem = styled(motion.div)`
   grid-template-rows: auto auto auto;
 `
 
-const JobCompanyLogo = styled(motion.custom(Img))`
+const JobCompanyLogo = styled(Img)`
   grid-column: 1;
   grid-row: 1/3;
   width: 50px;
@@ -38,6 +38,8 @@ const JobTitle = styled(motion.h3)`
 `
 
 const JobDuration = styled(motion.p)`
+  font-size: 16px;
+
   grid-column: 1;
   grid-row: 2;
 
@@ -51,7 +53,7 @@ const JobDesc = styled(motion.div)`
 
   padding-top: 0.7rem;
 
-  font-size: 18px;
+  font-size: 16px;
 
   p {
     color: rgba(255, 255, 255, 0.65);
@@ -83,7 +85,7 @@ const Experience = ({ experienceObject, transDelay }) => {
     html,
   } = experienceObject
 
-  console.log(experienceObject)
+  // console.log(experienceObject)
 
   return (
     <JobItem
