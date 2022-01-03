@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 3
 id: 'ubisoft-wpg'
 type: 'experience'
 company_name: 'Ubisoft Winnipeg'

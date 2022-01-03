@@ -127,6 +127,9 @@ const ContactSection = () => {
                   linkedin
                 </a>
                 !
+                <br/>
+                <br/>
+                I'm currently looking for Summer 2022 internship/co-op position!
               </ContactParagraph>
 
               <motion.div

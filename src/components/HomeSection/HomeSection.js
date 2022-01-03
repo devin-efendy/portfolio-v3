@@ -46,7 +46,7 @@ const IntroText = styled(motion.p)`
 
   padding: 0 2rem;
 
-  font-size: 18px;
+  font-size: 16px;
 
   @media ${Device.min.Tablet} {
     /* font-size: 1rem; */
@@ -95,7 +95,7 @@ const ExploreButton = styled(motion.button)`
   }
 `
 
-const CustomLink = styled(motion.custom(Link))``
+const CustomLink = styled(Link)``
 
 const HomeSection = () => {
   return (
@@ -116,7 +116,7 @@ const HomeSection = () => {
           </Scribble>
           <HeaderText>
             <motion.span>Hi! My name is</motion.span> <br />
-            <NameHighlight>DEVIN EFENDY.</NameHighlight>
+            <NameHighlight>DEVIN EFENDY</NameHighlight>
           </HeaderText>
         </motion.div>
 

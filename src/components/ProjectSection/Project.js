@@ -35,7 +35,7 @@ const ProjectContainer = styled(motion.div)`
   }
 `
 
-const ProjectImage = styled(motion.custom(Img))`
+const ProjectImage = styled(Img)`
   width: 100%;
   height: 100%;
   margin-bottom: 3rem;
@@ -57,7 +57,7 @@ const ProjectTitle = styled(motion.h1)`
 
 const ProjectDescription = styled(motion.div)`
   margin-bottom: 2rem;
-  font-size: 18px;
+  font-size: 16px;
 
   p {
     color: rgba(255, 255, 255, 0.65);

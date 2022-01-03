@@ -54,7 +54,7 @@ const ImgContainer = styled(motion.div)`
   }
 `
 
-const ImgMobile = styled(motion.custom(Img))`
+const ImgMobile = styled(Img)`
   border-radius: 10px;
   max-width: 250px;
 
@@ -91,7 +91,7 @@ const AboutHeading = styled(motion.h1)`
 const AboutParagraph = styled(motion.p)`
   margin-bottom: 3rem;
   /* max-width: 500px; */
-  font-size: 18px;
+  font-size: 16px;
 
   color: rgba(255, 255, 255, 0.65);
 
@@ -168,7 +168,7 @@ const AboutSection = () => {
                 A little bit about myself
               </Scribble>
               <AboutParagraph>
-                I'm a fourth year Computer Science Honours{' '}
+                I'm a final year Computer Science Honours{' '}
                 <a
                   href="http://coop.cs.umanitoba.ca/"
                   target="_blank"
@@ -183,11 +183,14 @@ const AboutSection = () => {
                   rel="noreferrer"
                 >
                   University of Manitoba
-                </a>
-                . I have always been intrigued by technology and Computer
-                Science. Especially, in area such as Software Engineering and
-                Web Development. I would be very happy to explore other areas
-                too!
+                </a>{' '}
+                and will be graduating in December 2022. I am very passionate
+                about tech and I like to build things with it. Through multiple
+                co-op terms, I gained industry experience in building web
+                applications and using technologies such as Next.js, React,
+                Node, TypeScript, SQL, Docker, Jest, and React Testing Library.
+                My areas of interest are front-end development, distributed
+                computing, and DevOps.
                 <br />
                 <br />I enjoy going to Hackathons and programming contests. I
                 also went to Montreal to attend{' '}
