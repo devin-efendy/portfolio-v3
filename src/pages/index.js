@@ -12,6 +12,7 @@ import HomeSection from '../components/HomeSection/HomeSection'
 import AboutSection from '../components/AboutSection/AboutSection'
 import ExperienceSection from '../components/ExperienceSection/ExperienceSection'
 import ProjectSection from '../components/ProjectSection/ProjectSection'
+import ComingSoon from '../components/ComingSoon/ComingSoon'
 
 import useProjectQuery from '../graphql/ProjectQuery'
 import useExperienceQuery from '../graphql/ExperienceQuery'
@@ -51,7 +52,10 @@ const IndexPage = () => {
 
       <Global />
 
-      <FramerNavigation />
+      <FixedLogo />
+      <ComingSoon/>
+
+      {/* <FramerNavigation />
       <FixedLogo />
       <SocialNav />
 
@@ -63,7 +67,7 @@ const IndexPage = () => {
 
       <ContactSection />
 
-      <Footer />
+      <Footer /> */}
     </motion.div>
   )
 }

@@ -20,14 +20,14 @@ const Container = styled(motion.div)`
 
 const HeaderText = styled(motion.h1)`
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   @media ${Device.min.Tablet} {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   @media ${Device.min.LaptopL} {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 `
 
@@ -115,8 +115,8 @@ const HomeSection = () => {
             Oh look! Someone is here
           </Scribble>
           <HeaderText>
-            <motion.span>Hi! My name is</motion.span> <br />
-            <NameHighlight>DEVIN EFENDY</NameHighlight>
+            <motion.span>Hi, I am </motion.span>
+            <NameHighlight>DEVIN EFENDY</NameHighlight>!
           </HeaderText>
         </motion.div>
 
